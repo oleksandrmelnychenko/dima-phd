@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.30cm] (input) at (0,3.15)
+  {Статичні дані\\$X_c$};
+\node[dissertation block,text width=3.70cm] (structural) at (-4.30,0.80)
+  {Структурні ознаки\\$Z_s,L_s$};
+\node[dissertation block,text width=3.70cm] (visual) at (0,0.80)
+  {Детерміновані спектрально-зорові ознаки\\$Z_v,L_v$};
+\node[dissertation block,dashed,text width=3.70cm] (learned) at (4.30,0.80)
+  {Неперевірене навчуване розширення\\$z_n$};
+\node[dissertation block,text width=6.40cm] (profile) at (0,-2.10)
+  {Статичний опис\\$H=\langle Z_v,Z_s,L_v,L_s,m_c,C\rangle$};
+
+\draw[dissertation arrow] (input.south) -- ++(0,-0.40) -| (structural.north);
+\draw[dissertation arrow] (input.south) -- (visual.north);
+\draw[dissertation arrow,dashed] (input.south) -- ++(0,-0.40) -| (learned.north);
+\draw[dissertation arrow] (structural.south) -- ++(0,-0.45) -| (profile.north);
+\draw[dissertation arrow] (visual.south) -- (profile.north);
+\draw[dissertation arrow,dashed] (learned.south) -- ++(0,-0.45) -| (profile.north);
+\end{tikzpicture}
+\caption{Структура методу спектрально-зорового та структурного аналізу фото- і відеооб’єктів вебресурсів}
+\label{fig:svs_method}
+\end{figure}

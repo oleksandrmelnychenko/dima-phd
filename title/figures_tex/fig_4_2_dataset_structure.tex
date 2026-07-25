@@ -1,0 +1,42 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.70cm] (all) at (0,3.2)
+  {Контрольний набір\\110 об’єктів};
+
+\node[dissertation block,text width=3.15cm] (png) at (-3.3,1.2)
+  {PNG\\100 об’єктів};
+\node[dissertation block,text width=3.15cm] (mp4) at (3.3,1.2)
+  {MP4\\10 об’єктів};
+
+\node[dissertation block,text width=2.75cm] (pngctrl) at (-5.1,-1.4)
+  {Контрольні PNG\\50};
+\node[dissertation block,text width=2.75cm] (pngmod) at (-1.7,-1.4)
+  {Змінені PNG\\50};
+\node[dissertation block,text width=2.75cm] (mp4ctrl) at (1.7,-1.4)
+  {Контрольні MP4\\5};
+\node[dissertation block,text width=2.95cm] (mp4tail) at (5.1,-1.4)
+  {MP4 із хвостовим\\маркером, 5};
+
+% Розподільні шини утворюють лише прямокутні траєкторії.
+\coordinate (formatbus) at (0,2.25);
+\draw[thick] (all.south) -- (formatbus);
+\draw[thick] (-3.3,2.25) -- (3.3,2.25);
+\draw[dissertation arrow] (-3.3,2.25) -- (png.north);
+\draw[dissertation arrow] (3.3,2.25) -- (mp4.north);
+
+\coordinate (pngbus) at (-3.3,-0.05);
+\draw[thick] (png.south) -- (pngbus);
+\draw[thick] (-5.1,-0.05) -- (-1.7,-0.05);
+\draw[dissertation arrow] (-5.1,-0.05) -- (pngctrl.north);
+\draw[dissertation arrow] (-1.7,-0.05) -- (pngmod.north);
+
+\coordinate (mpfourbus) at (3.3,-0.05);
+\draw[thick] (mp4.south) -- (mpfourbus);
+\draw[thick] (1.7,-0.05) -- (5.1,-0.05);
+\draw[dissertation arrow] (1.7,-0.05) -- (mp4ctrl.north);
+\draw[dissertation arrow] (5.1,-0.05) -- (mp4tail.north);
+\end{tikzpicture}
+\caption{Форматний і класовий склад контрольного набору за контрольним описом}
+\label{fig:dataset_structure}
+\end{figure}

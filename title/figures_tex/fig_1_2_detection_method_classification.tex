@@ -1,0 +1,27 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,classification group/.style={dissertation block,text width=2.60cm,font=\footnotesize\setstretch{1}}]
+\node[dissertation block,text width=3.50cm] (root) at (0,3) {Методи виявлення};
+\node[classification group] (stat) at (-6.5,0) {Статистичні};
+\node[classification group] (str) at (-3.9,0) {Структурні};
+\node[classification group] (sv) at (-1.3,0) {Спектрально-\\зорові};
+\node[classification group] (video) at (1.3,0) {Відеокодекові};
+\node[classification group] (beh) at (3.9,0) {Поведінкові};
+\node[classification group] (multi) at (6.5,0) {Мультимодальні};
+\node[dissertation block,text width=9.20cm] (gap) at (0,-3) {Наукова прогалина: відсутність узгодженого подання\\рівнів мультимедійного об’єкта та реакції вебсистеми};
+\draw[dissertation arrow] (root) -- (stat);
+\draw[dissertation arrow] (root) -- (str);
+\draw[dissertation arrow] (root) -- (sv);
+\draw[dissertation arrow] (root) -- (video);
+\draw[dissertation arrow] (root) -- (beh);
+\draw[dissertation arrow] (root) -- (multi);
+\draw[dissertation arrow] (stat) -- (gap);
+\draw[dissertation arrow] (str) -- (gap);
+\draw[dissertation arrow] (sv) -- (gap);
+\draw[dissertation arrow] (video) -- (gap);
+\draw[dissertation arrow] (beh) -- (gap);
+\draw[dissertation arrow] (multi) -- (gap);
+\end{tikzpicture}
+\caption{Групи методів виявлення аномальних кодів за джерелами ознак}
+\label{fig:detection_method_classification}
+\end{figure}

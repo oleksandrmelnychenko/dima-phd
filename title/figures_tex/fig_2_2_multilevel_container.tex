@@ -1,0 +1,30 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.05cm] (object) at (-5.70,1.20)
+  {Незмінний об’єкт\\$X_{mm}$};
+\node[dissertation block,text width=3.35cm] (visual) at (-2.05,2.25)
+  {Зорові дані\\$X_v$};
+\node[dissertation block,text width=3.35cm] (structural) at (-2.05,0.15)
+  {Структурні дані\\$X_s,X_m$};
+\node[dissertation block,text width=4.15cm] (static) at (1.70,1.20)
+  {Передоброблений статичний вхід\\$X_c=\langle X_{mm},X_v,X_s,X_m\rangle$};
+\node[dissertation block,text width=3.40cm] (events) at (-2.05,-2.20)
+  {Причинно пов’язані події\\$X_b$};
+\node[dissertation block,text width=3.20cm] (context) at (1.70,-1.35)
+  {Доступність і контекст\\$(m_A,C)$};
+\node[dissertation block,text width=3.20cm] (input) at (5.45,0.15)
+  {Повний вхід моделі\\$X_A$};
+
+\draw[dissertation arrow] (object.east) -- (visual.west);
+\draw[dissertation arrow] (object.east) -- (structural.west);
+\draw[dissertation arrow] (object.north) -- ++(0,1.70) -| (static.north);
+\draw[dissertation arrow] (visual.east) -- (static.west);
+\draw[dissertation arrow] (structural.east) -- (static.west);
+\draw[dissertation arrow] (static.east) -- (input.west);
+\draw[dissertation arrow] (events.east) -- ++(0.55,0) -| ([xshift=-0.45cm]input.south);
+\draw[dissertation arrow] (context.east) -- (input.west);
+\end{tikzpicture}
+\caption{Походження статичних і подієво-поведінкових даних повного входу моделі}
+\label{fig:multilevel_container}
+\end{figure}

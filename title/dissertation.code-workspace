@@ -1,0 +1,41 @@
+{
+  "folders": [
+    {
+      "name": "Дисертація",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.search.rootFiles.include": [
+      "main.tex"
+    ],
+    "latex-workshop.latex.rootFile.doNotPrompt": true,
+    "latex-workshop.latex.outDir": "%DIR%/_build",
+    "latex-workshop.latex.auxDir": "%DIR%/_build",
+    "search.exclude": {
+      "_build": true
+    },
+    "files.exclude": {
+      "_build": true,
+      "**/*.aux": true,
+      "**/*.bbl": true,
+      "**/*.bcf": true,
+      "**/*.blg": true,
+      "**/*.fdb_latexmk": true,
+      "**/*.fls": true,
+      "**/*.log": true,
+      "**/*.out": true,
+      "**/*.run.xml": true,
+      "**/*.synctex.gz": true,
+      "**/*.toc": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "james-yu.latex-workshop"
+    ]
+  }
+}

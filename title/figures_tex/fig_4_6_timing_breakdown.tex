@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=0.13cm,y=1cm]
+  \draw[fill=black!20,draw=black] (0,0) rectangle (1.39,1);
+  \draw[fill=black!65,draw=black] (1.39,0) rectangle (99.88,1);
+  \draw[fill=black!40,draw=black] (99.88,0) rectangle (99.97,1);
+  \draw[fill=white,draw=black] (99.97,0) rectangle (100,1);
+  \draw[thick] (0,0) rectangle (100,1);
+  \node[white,font=\footnotesize] at (50.635,0.5)
+    {спектрально-зоровий аналіз: 98,49\%};
+  \draw[->] (0.695,1.05) -- (8,2.1);
+  \node[anchor=west,font=\footnotesize] at (8,2.1)
+    {структурний аналіз: 1,39\%};
+  \draw[->] (99.925,-0.05) -- (75,-1.05);
+  \node[anchor=east,font=\footnotesize,align=right] at (75,-1.05)
+    {правилова подієво-поведінкова оцінка: 0,09\%;\\інтеграція ознак: 0,03\%};
+  \node[anchor=west,font=\footnotesize] at (0,-0.55) {0\%};
+  \node[anchor=east,font=\footnotesize] at (100,-0.55) {100\%};
+  \node[font=\footnotesize] at (50,-1.65)
+    {прийняття рішення та реєстрацію результатів не враховано};
+\end{tikzpicture}
+\caption{Розподіл середнього часу між виміряними операціями}
+\label{fig:timing_breakdown}
+\end{figure}

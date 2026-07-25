@@ -1,0 +1,27 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[anchor=east,font=\footnotesize\bfseries] at (-5.70,1.5) {Внутрішнє розроблення:};
+\node[dissertation block,text width=2.90cm,minimum height=1.15cm] (groups) at (-3.70,1.5)
+  {200 первинних груп};
+\node[dissertation block,text width=3.00cm,minimum height=1.15cm] (split) at (0,1.5)
+  {Груповий поділ\\60:20:20};
+\node[dissertation block,text width=3.05cm,minimum height=1.15cm] (lock) at (3.70,1.5)
+  {Фіксація моделей\\і порогів};
+
+\node[anchor=east,font=\footnotesize\bfseries] at (-5.70,-1.5) {Зовнішня перевірка:};
+\node[dissertation block,text width=2.90cm,minimum height=1.15cm] (source) at (-3.70,-1.5)
+  {Нові природні записи};
+\node[dissertation block,text width=3.00cm,minimum height=1.15cm] (configuration) at (0,-1.5)
+  {Незмінна\\конфігурація};
+\node[dissertation block,text width=3.05cm,minimum height=1.15cm] (results) at (3.70,-1.5)
+  {Пооб’єктні\\результати};
+
+\draw[dissertation arrow] (groups.east) -- (split.west);
+\draw[dissertation arrow] (split.east) -- (lock.west);
+\draw[dissertation arrow] (source.east) -- (configuration.west);
+\draw[dissertation arrow] (configuration.east) -- (results.west);
+\end{tikzpicture}
+\caption{Розмежування внутрішнього розроблення та зовнішнього оцінювання}
+\label{fig:experiment_protocol}
+\end{figure}

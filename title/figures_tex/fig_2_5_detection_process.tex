@@ -1,0 +1,23 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=9.8cm,minimum height=12mm] (model) at (0,3.6)
+  {Модель мультимодального представлення\\прихованої загрози};
+
+\node[dissertation block,text width=5.2cm,minimum height=13mm] (method1) at (-3.6,1.2)
+  {Метод спектрально-зорового\\та структурного аналізу};
+\node[dissertation block,text width=5.2cm,minimum height=13mm] (method2) at (3.6,1.2)
+  {Метод поведінкового\\узгодження ознак\\різного походження};
+
+\node[dissertation block,text width=9.8cm,minimum height=12mm] (technology) at (0,-1.4)
+  {П’ятиетапна інформаційна технологія\\виявлення аномальних кодів};
+
+\draw[dissertation arrow] (model.south) -- ++(0,-0.35) -| (method1.north);
+\draw[dissertation arrow] (model.south) -- ++(0,-0.35) -| (method2.north);
+\draw[dissertation arrow] (method1.east) -- (method2.west);
+\draw[dissertation arrow] (method1.south) -- ++(0,-0.35) -| (technology.north);
+\draw[dissertation arrow] (method2.south) -- ++(0,-0.35) -| (technology.north);
+\end{tikzpicture}
+\caption{Взаємозв’язок моделі, двох методів та інформаційної технології}
+\label{fig:detection_process}
+\end{figure}

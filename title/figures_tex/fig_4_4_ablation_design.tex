@@ -1,0 +1,36 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.60cm] (base) at (0,3.0)
+  {Зафіксована\\конфігурація};
+
+\node[dissertation block,text width=2.85cm] (full) at (-5.1,0)
+  {Спільна\\конфігурація};
+\node[dissertation block,text width=2.85cm] (minusstr) at (-1.7,0)
+  {Без структурних\\ознак};
+\node[dissertation block,text width=2.95cm] (minussv) at (1.7,0)
+  {Без частотних і\\зорових ознак};
+\node[dissertation block,text width=3.05cm] (minusbeh) at (5.1,0)
+  {Без правилового\\подієво-поведінкового\\вектора};
+
+\node[dissertation block,text width=12.00cm] (cmp) at (0,-2.8)
+  {Агреговане зіставлення шести показників\\за незмінного правила рішення};
+
+% Єдина верхня шина усуває діагональне розгалуження.
+\coordinate (configbus) at (0,1.45);
+\draw[thick] (base.south) -- (configbus);
+\draw[thick] (-5.1,1.45) -- (5.1,1.45);
+\draw[dissertation arrow] (-5.1,1.45) -- (full.north);
+\draw[dissertation arrow] (-1.7,1.45) -- (minusstr.north);
+\draw[dissertation arrow] (1.7,1.45) -- (minussv.north);
+\draw[dissertation arrow] (5.1,1.45) -- (minusbeh.north);
+
+% Широкий блок зіставлення приймає чотири окремі вертикальні потоки.
+\draw[dissertation arrow] (full.south) -- ([xshift=-5.1cm]cmp.north);
+\draw[dissertation arrow] (minusstr.south) -- ([xshift=-1.7cm]cmp.north);
+\draw[dissertation arrow] (minussv.south) -- ([xshift=1.7cm]cmp.north);
+\draw[dissertation arrow] (minusbeh.south) -- ([xshift=5.1cm]cmp.north);
+\end{tikzpicture}
+\caption{Схема агрегованого компонентного вилучення}
+\label{fig:ablation_design}
+\end{figure}

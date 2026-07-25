@@ -1,0 +1,44 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=4.20cm] (object) at (0,4.85)
+  {Початковий об’єкт\\$X_{mm}$};
+\node[dissertation block,text width=4.20cm] (isolation) at (0,3.25)
+  {Ізоляція об’єкта};
+\node[dissertation block,text width=4.20cm] (cycle) at (0,1.65)
+  {Формування аналітичного стану\\$S_A$};
+\node[dissertation block,text width=4.20cm] (registered) at (0,0.05)
+  {Політика реагування\\$D_A=F_A(S_A,\theta_p)$};
+\node[dissertation block,text width=4.20cm] (policy) at (0,-1.55)
+  {Зареєстрований результат\\$S_5=F_R(S_4,C_R)$};
+
+\node[dissertation block,text width=2.45cm] (allow) at (-5.10,-4.00)
+  {Допуск};
+\node[dissertation block,text width=2.85cm] (review) at (-1.75,-4.00)
+  {Експертна перевірка};
+\node[dissertation block,text width=2.45cm] (block) at (1.75,-4.00)
+  {Блокування};
+\node[dissertation block,text width=3.35cm] (reconstruct) at (5.15,-4.00)
+  {Реконструкція кандидата\\$X_{mm,j}$};
+
+\draw[dissertation arrow] (object.south) -- (isolation.north);
+\draw[dissertation arrow] (isolation.south) -- (cycle.north);
+\draw[dissertation arrow] (cycle.south) -- (registered.north);
+\draw[dissertation arrow] (registered.south) -- (policy.north);
+
+\coordinate (decisionbus) at (0,-2.80);
+\draw[dissertation arrow] (policy.south) -- (decisionbus);
+\draw[thick] (-5.10,-2.80) -- (5.15,-2.80);
+\draw[dissertation arrow] (-5.10,-2.80) -- (allow.north);
+\draw[dissertation arrow] (-1.75,-2.80) -- (review.north);
+\draw[dissertation arrow] (1.75,-2.80) -- (block.north);
+\draw[dissertation arrow] (5.15,-2.80) -- (reconstruct.north);
+
+\coordinate (loopright) at (7.15,3.25);
+\draw[thick] (reconstruct.east) -- (7.15,-4.00) -- (loopright);
+\node[font=\small,anchor=east] at (6.95,-0.85) {новий цикл};
+\draw[dissertation arrow] (loopright) -- (isolation.east);
+\end{tikzpicture}
+\caption{Контур нульової довіри для інформаційної технології}
+\label{fig:zero_trust}
+\end{figure}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-17T15:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="fig_4_3_experiment_protocol" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="1" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="label1" value="Внутрішнє розроблення:" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="10" y="180" width="180" height="40" as="geometry"/></mxCell>
+        <mxCell id="same" value="200 первинних&lt;br&gt;груп" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="210" y="170" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="tune" value="Груповий поділ&lt;br&gt;60:20:20" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="475" y="170" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="report" value="Фіксація моделей&lt;br&gt;і порогів" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="740" y="170" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="label2" value="Зовнішня перевірка:" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="10" y="460" width="180" height="40" as="geometry"/></mxCell>
+        <mxCell id="source" value="Нові природні&lt;br&gt;записи" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="210" y="450" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="split" value="Незмінна&lt;br&gt;конфігурація" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="475" y="450" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="test" value="Пооб’єктні&lt;br&gt;результати" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="740" y="450" width="190" height="60" as="geometry"/></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="same" target="tune"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="tune" target="report"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="source" target="split"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="split" target="test"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

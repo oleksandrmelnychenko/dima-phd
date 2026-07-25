@@ -1,0 +1,26 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.30cm,minimum height=1.15cm] (preliminary) at (-4.5,1.5)
+  {Попередній прогін};
+\node[dissertation block,text width=3.30cm,minimum height=1.15cm] (internal) at (0,1.5)
+  {Внутрішній цикл};
+\node[dissertation block,text width=3.30cm,minimum height=1.15cm] (external) at (4.5,1.5)
+  {Перша зовнішня\\перевірка};
+
+\node[dissertation block,text width=3.55cm,minimum height=1.15cm] (confirmatory) at (4.5,-1.5)
+  {Поетапна\\перевірка};
+\node[dissertation block,text width=3.30cm,minimum height=1.15cm] (large) at (0,-1.5)
+  {Багатоформатна\\серія};
+\node[dissertation block,text width=3.30cm,minimum height=1.15cm] (independent) at (-4.5,-1.5)
+  {Незалежне\\підтвердження};
+
+\draw[dissertation arrow] (preliminary.east) -- (internal.west);
+\draw[dissertation arrow] (internal.east) -- (external.west);
+\draw[dissertation arrow] (external.south) -- (confirmatory.north);
+\draw[dissertation arrow] (confirmatory.west) -- (large.east);
+\draw[dissertation arrow] (large.west) -- (independent.east);
+\end{tikzpicture}
+\caption{Послідовність експериментальних серій дослідження}
+\label{fig:experimental_setup}
+\end{figure}

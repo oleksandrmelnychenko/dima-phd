@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.35cm] (visual) at (-4.75,2.15)
+  {Спектрально-зорові ознаки\\$Z_v,L_v$};
+\node[dissertation block,text width=3.35cm] (structural) at (0,2.15)
+  {Структурні ознаки\\$Z_s,L_s$};
+\node[dissertation block,text width=3.35cm] (behavior) at (4.75,2.15)
+  {Подієво-поведінкові ознаки\\$Z_b$};
+\node[dissertation block,text width=3.30cm] (context) at (-3.15,-0.55)
+  {Доступність і контекст\\$m_A,C$};
+\node[dissertation block,text width=3.30cm] (integration) at (0.95,-0.55)
+  {Узгоджене об’єднання ознак\\$F_I$};
+\node[dissertation block,text width=3.65cm] (joint) at (5.05,-0.55)
+  {Інтегроване представлення\\$Z=\langle z,L,m_A,C\rangle$};
+
+\draw[dissertation arrow] (visual.south) -- ++(0,-0.45) -| (integration.north);
+\draw[dissertation arrow] (structural.south) -- (integration.north);
+\draw[dissertation arrow] (behavior.south) -- ++(0,-0.45) -| (integration.north);
+\draw[dissertation arrow] (context.east) -- (integration.west);
+\draw[dissertation arrow] (integration.east) -- (joint.west);
+\end{tikzpicture}
+\caption{Формування інтегрованого представлення ознак у межах єдиної моделі}
+\label{fig:feature_space}
+\end{figure}

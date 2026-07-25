@@ -1,0 +1,36 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.25cm] (profile) at (-4.80,3.45)
+  {Статичний опис\\$H$};
+\node[dissertation block,text width=3.25cm] (events) at (0,3.45)
+  {Причинно пов’язані події\\$X_b$};
+\node[dissertation block,text width=3.25cm] (context) at (4.80,3.45)
+  {Умова доступності\\та контекст $m_A,C$};
+\node[dissertation block,text width=3.25cm] (rules) at (-2.60,1.15)
+  {Перевірена правилова\\гілка $Z_r$};
+\node[dissertation block,dashed,text width=3.25cm] (states) at (2.60,1.15)
+  {Неперевірені послідовнісні стани\\$U_b$};
+\node[dissertation block,dashed,text width=3.25cm] (attention) at (2.60,-0.95)
+  {Необов’язкове перехресне\\зіставлення $A$};
+\node[dissertation block,text width=3.25cm] (integration) at (0,-2.85)
+  {Інтеграція ознак\\$F_I$};
+\node[dissertation block,text width=3.25cm] (joint) at (0,-4.65)
+  {Інтегроване представлення\\$Z$};
+
+\draw[dissertation arrow] ([xshift=-0.65cm]events.south)
+  -- ++(0,-0.45) -| (rules.north);
+\draw[dissertation arrow,dashed] ([xshift=0.65cm]events.south)
+  -- ++(0,-0.45) -| (states.north);
+\draw[dissertation arrow,dashed] (states.south) -- (attention.north);
+\draw[dissertation arrow] (profile.west) -- ++(-0.45,0) |- (integration.west);
+\draw[dissertation arrow,dashed] (context.east) -- ++(0.45,0) |- (attention.east);
+\draw[dissertation arrow] (rules.south) -- ++(0,-0.45)
+  -| ([xshift=-0.65cm]integration.north);
+\draw[dissertation arrow,dashed] (attention.south) -- ++(0,-0.45)
+  -| ([xshift=0.65cm]integration.north);
+\draw[dissertation arrow] (integration.south) -- (joint.north);
+\end{tikzpicture}
+\caption{Метод поведінкового узгодження ознак різного походження для фото- та відеооб’єктів вебресурсів}
+\label{fig:behavior_alignment}
+\end{figure}

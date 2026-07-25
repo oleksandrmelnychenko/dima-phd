@@ -1,0 +1,34 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[->,thick] (0,0) -- (0,6.25);
+  \draw[->,thick] (0,0) -- (12.5,0);
+  \foreach \y/\v in {0/0,1.5/0{,}25,3/0{,}50,4.5/0{,}75,6/1{,}00}{
+    \draw (-0.08,\y) -- (0.08,\y);
+    \node[anchor=east,font=\footnotesize] at (-0.12,\y) {\v};
+    \draw[densely dotted] (0.1,\y) -- (12.2,\y);
+  }
+  \filldraw[fill=black!20,draw=black] (0.6,0) rectangle (1.8,5.3454);
+  \filldraw[fill=black!30,draw=black] (2.6,0) rectangle (3.8,5.2632);
+  \filldraw[fill=black!40,draw=black] (4.6,0) rectangle (5.8,5.4546);
+  \filldraw[fill=black!50,draw=black] (6.6,0) rectangle (7.8,5.3574);
+  \filldraw[fill=black!60,draw=black] (8.6,0) rectangle (9.8,0.7638);
+  \filldraw[fill=black!70,draw=black] (10.6,0) rectangle (11.8,0.5454);
+
+  \node[font=\footnotesize] at (1.2,5.58) {0,8909};
+  \node[font=\footnotesize] at (3.2,5.50) {0,8772};
+  \node[font=\footnotesize] at (5.2,5.69) {0,9091};
+  \node[font=\footnotesize] at (7.2,5.59) {0,8929};
+  \node[font=\footnotesize] at (9.2,1.02) {0,1273};
+  \node[font=\footnotesize] at (11.2,0.80) {0,0909};
+
+  \node[font=\footnotesize] at (1.2,-0.42) {$A$};
+  \node[font=\footnotesize] at (3.2,-0.42) {$P$};
+  \node[font=\footnotesize] at (5.2,-0.42) {$R$};
+  \node[font=\footnotesize] at (7.2,-0.42) {$F_1$};
+  \node[font=\footnotesize] at (9.2,-0.42) {$R_+$};
+  \node[font=\footnotesize] at (11.2,-0.42) {$R_-$};
+\end{tikzpicture}
+\caption{Показники, арифметично одержані з агрегованої матриці помилок}
+\label{fig:metric_comparison}
+\end{figure}

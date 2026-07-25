@@ -1,0 +1,20 @@
+# macOS and editor files
+.DS_Store
+*.swp
+*~
+
+# Temporary LaTeX files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Generated builds and visual-review previews
+title/_build/
+title/tmp/

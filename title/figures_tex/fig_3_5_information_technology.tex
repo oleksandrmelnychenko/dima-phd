@@ -1,0 +1,22 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=3.65cm] (s1) at (-4.70,1.75)
+  {1. Попереднє оброблення\\$X_{mm}\rightarrow X_c$};
+\node[dissertation block,text width=3.65cm] (s2) at (0,1.75)
+  {2. Виділення ознак\\$H,X_b$};
+\node[dissertation block,text width=3.65cm] (s3) at (4.70,1.75)
+  {3. Інтеграція ознак\\$Z$};
+\node[dissertation block,text width=4.15cm] (s4) at (2.40,-1.40)
+  {4. Прийняття рішення\\$S_A,D_A$};
+\node[dissertation block,text width=4.15cm] (s5) at (-2.40,-1.40)
+  {5. Реєстрація результатів\\$S_5=F_R(S_4,C_R)$};
+
+\draw[dissertation arrow] (s1.east) -- (s2.west);
+\draw[dissertation arrow] (s2.east) -- (s3.west);
+\draw[dissertation arrow] (s3.south) -- (s4.north);
+\draw[dissertation arrow] (s4.west) -- (s5.east);
+\end{tikzpicture}
+\caption{П’ять етапів інформаційної технології виявлення аномальних кодів у фото- та відеооб’єктах вебресурсів}
+\label{fig:information_technology}
+\end{figure}

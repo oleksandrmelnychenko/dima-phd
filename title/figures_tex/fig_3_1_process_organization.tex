@@ -1,0 +1,25 @@
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[dissertation block,text width=2.70cm] (object) at (-5.00,1.15)
+  {Початковий об’єкт\\$X_{mm}$};
+\node[dissertation block,text width=2.70cm] (static) at (-1.95,1.15)
+  {Статичні дані\\$X_c$};
+\node[dissertation block,text width=2.80cm] (profile) at (1.15,1.15)
+  {Статичний опис\\$H$};
+\node[dissertation block,text width=3.20cm] (events) at (-2.25,-1.15)
+  {Причинно пов’язані події\\$X_b$};
+\node[dissertation block,text width=2.85cm] (joint) at (1.15,-1.15)
+  {Інтегровані ознаки\\$Z$};
+\node[dissertation block,text width=2.80cm] (state) at (4.40,-1.15)
+  {Аналітичний стан\\$S_A$};
+
+\draw[dissertation arrow] (object.east) -- (static.west);
+\draw[dissertation arrow] (static.east) -- (profile.west);
+\draw[dissertation arrow] (profile.south) -- (joint.north);
+\draw[dissertation arrow] (events.east) -- (joint.west);
+\draw[dissertation arrow] (joint.east) -- (state.west);
+\end{tikzpicture}
+\caption{Формування аналітичного стану зі статичного опису та причинно пов’язаних подій}
+\label{fig:process_organization}
+\end{figure}

@@ -1,0 +1,19 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,dissertation block/.append style={font=\small\setstretch{1}}]
+\node[dissertation block,text width=4.20cm] (lim) at (0,5.5) {Обмеження відомих підходів};
+\node[dissertation block,text width=9.00cm] (model) at (0,3.5) {Модель мультимодального представлення\\прихованої загрози};
+\node[dissertation block,text width=5.90cm] (svs) at (-3.5,0.4) {Метод спектрально-зорового\\та структурного аналізу};
+\node[dissertation block,text width=5.90cm] (beh) at (3.5,0.4) {Метод поведінкового\\узгодження ознак\\різного походження};
+\node[dissertation block,text width=9.00cm] (tech) at (0,-2.8) {Інформаційна технологія виявлення аномальних кодів\\у фото- та відеооб’єктах вебресурсів};
+\node[dissertation block,text width=5.20cm] (exp) at (0,-5.1) {Експериментальне оцінювання\\та визначення доказових меж};
+\draw[dissertation arrow] (lim) -- (model);
+\draw[dissertation arrow] (model) -- (svs);
+\draw[dissertation arrow] (model) -- (beh);
+\draw[dissertation arrow] (svs) -- (tech);
+\draw[dissertation arrow] (beh) -- (tech);
+\draw[dissertation arrow] (tech) -- (exp);
+\end{tikzpicture}
+\caption{Логіка переходу від установлених обмежень до експериментального оцінювання}
+\label{fig:research_logic}
+\end{figure}

@@ -1,0 +1,73 @@
+% !TeX root = main.tex
+% Кодування, мова та шрифти
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage[english,ukrainian]{babel}
+
+% Геометрія сторінки та абзацний набір
+\usepackage[left=30mm,right=15mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\usepackage{microtype}
+\emergencystretch=2em
+
+% Математичні засоби
+\usepackage{amsmath,amssymb,mathtools}
+\numberwithin{equation}{chapter}
+
+% Таблиці та переліки
+\usepackage{array,booktabs,longtable,tabularx,multirow}
+\usepackage{pdflscape}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.25cm}
+
+% Рисунки та векторні схеми
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,shapes.geometric}
+\tikzset{
+  dissertation block/.style={draw=black,line width=0.8pt,fill=white,rectangle,
+    align=center,minimum height=9mm,text width=36mm,font=\small,inner sep=3pt},
+  dissertation small/.style={draw=black,line width=0.8pt,fill=white,rectangle,align=center,
+    minimum height=7mm,text width=29mm,font=\footnotesize,inner sep=2.5pt},
+  dissertation arrow/.style={-{Latex[length=2.2mm]},thick,draw=black},
+  dissertation container/.style={draw=black,line width=0.8pt,dashed,inner sep=5pt}
+}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=normalfont,labelsep=endash,justification=centering}
+\captionsetup[figure]{name=Рисунок,position=bottom}
+\captionsetup[table]{name=Таблиця,position=top}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+
+% Заголовки
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}
+  {\MakeUppercase{\chaptername}\ \thechapter}
+  {0.5ex}
+  {\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-10pt}{18pt}
+\titleformat{\section}{\normalfont\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
+
+% Посилання
+\usepackage{csquotes}
+\usepackage{xurl}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{
+  pdftitle={Інформаційна технологія виявлення аномальних кодів у фото- та відеооб’єктах вебресурсів},
+  pdfauthor={Дмитро Денисюк},
+  pdfsubject={Дисертація на здобуття ступеня доктора філософії}
+}
+
+% Службові команди
+\newcommand{\foreignterm}[1]{\textit{#1}}
