@@ -11,13 +11,13 @@
         <mxCell id="n2" value="Структурні ознаки&lt;br&gt;&lt;b&gt;Z&lt;sub&gt;s&lt;/sub&gt;, L&lt;sub&gt;s&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="120" y="260" width="230" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="n3" value="Детерміновані спектрально-візуальні ознаки&lt;br&gt;&lt;b&gt;Z&lt;sub&gt;v&lt;/sub&gt;, L&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n3" value="Детерміновані спектрально-зорові ознаки&lt;br&gt;&lt;b&gt;Z&lt;sub&gt;v&lt;/sub&gt;, L&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="445" y="250" width="280" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="Неперевірене навчуване розширення&lt;br&gt;&lt;b&gt;z&lt;sub&gt;n&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+        <mxCell id="n4" value="Неперевірене розширення&lt;br&gt;на основі навченої моделі" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
           <mxGeometry x="810" y="250" width="250" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="n5" value="Статичний профіль&lt;br&gt;&lt;b&gt;H=⟨Z&lt;sub&gt;v&lt;/sub&gt;,Z&lt;sub&gt;s&lt;/sub&gt;,L&lt;sub&gt;v&lt;/sub&gt;,L&lt;sub&gt;s&lt;/sub&gt;,m&lt;sub&gt;c&lt;/sub&gt;,C⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n5" value="Статичний опис&lt;br&gt;&lt;b&gt;H=⟨Z&lt;sub&gt;v&lt;/sub&gt;,Z&lt;sub&gt;s&lt;/sub&gt;,ρ&lt;sub&gt;v&lt;/sub&gt;,ρ&lt;sub&gt;s&lt;/sub&gt;,L&lt;sub&gt;v&lt;/sub&gt;,L&lt;sub&gt;s&lt;/sub&gt;,m&lt;sub&gt;c&lt;/sub&gt;,C&lt;sub&gt;H&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="350" y="500" width="440" height="75" as="geometry"/>
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n1" target="n2">

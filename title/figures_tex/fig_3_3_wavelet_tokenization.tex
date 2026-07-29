@@ -10,9 +10,9 @@
 \node[dissertation block,text width=3.15cm] (deterministic) at (-0.30,-0.20)
   {Детерміноване подання\\$z_d$};
 \node[dissertation block,dashed,text width=3.15cm] (sequence) at (3.55,-0.20)
-  {Хвилькова послідовність\\$T_v$};
+  {Упорядковані локальні описи};
 \node[dissertation block,dashed,text width=3.15cm] (learned) at (3.55,-2.45)
-  {Навчуване подання\\$z_n$};
+  {Подання, сформоване навченою моделлю};
 \node[dissertation block,text width=3.45cm] (output) at (-0.30,-3.65)
   {Спектрально-зорові ознаки\\$Z_v,L_v$};
 
@@ -24,6 +24,6 @@
 \draw[dissertation arrow] (deterministic.south) -- (output.north);
 \draw[dissertation arrow,dashed] (learned.south) |- (output.east);
 \end{tikzpicture}
-\caption{Формування спектрально-зорових ознак у детермінованій та можливій навчуваній конфігураціях}
+\caption{Формування спектрально-зорових ознак у детермінованій конфігурації та можливому розширенні на основі навченої моделі}
 \label{fig:wavelet_tokenization}
 \end{figure}

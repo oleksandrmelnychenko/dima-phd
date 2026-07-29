@@ -8,7 +8,7 @@
 \node[dissertation block,text width=4.20cm] (cycle) at (0,1.65)
   {Формування аналітичного стану\\$S_A$};
 \node[dissertation block,text width=4.20cm] (registered) at (0,0.05)
-  {Політика реагування\\$D_A=F_A(S_A,\theta_p)$};
+  {Правило реагування\\$D_A=F_A(S_A,C_p,\theta_p)$};
 \node[dissertation block,text width=4.20cm] (policy) at (0,-1.55)
   {Зареєстрований результат\\$S_5=F_R(S_4,C_R)$};
 
@@ -19,7 +19,7 @@
 \node[dissertation block,text width=2.45cm] (block) at (1.75,-4.00)
   {Блокування};
 \node[dissertation block,text width=3.35cm] (reconstruct) at (5.15,-4.00)
-  {Реконструкція кандидата\\$X_{mm,j}$};
+  {Реконструйований об’єкт\\$X_{mm,j}$};
 
 \draw[dissertation arrow] (object.south) -- (isolation.north);
 \draw[dissertation arrow] (isolation.south) -- (cycle.north);
@@ -39,6 +39,6 @@
 \node[font=\small,anchor=east] at (6.95,-0.85) {новий цикл};
 \draw[dissertation arrow] (loopright) -- (isolation.east);
 \end{tikzpicture}
-\caption{Контур нульової довіри для інформаційної технології}
+\caption{Схема ізоляції та повторної перевірки мультимедійного об’єкта}
 \label{fig:zero_trust}
 \end{figure}
