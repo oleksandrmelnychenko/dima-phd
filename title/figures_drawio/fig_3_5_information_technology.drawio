@@ -8,16 +8,16 @@
         <mxCell id="n1" value="1. Попереднє оброблення&lt;br&gt;&lt;b&gt;X&lt;sub&gt;mm&lt;/sub&gt; → X&lt;sub&gt;c&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="60" y="120" width="260" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n2" value="2. Виділення ознак&lt;br&gt;&lt;b&gt;H, X&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n2" value="2. Формування ознак&lt;br&gt;&lt;b&gt;H, J&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="450" y="120" width="260" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n3" value="3. Інтеграція ознак&lt;br&gt;&lt;b&gt;Z&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n3" value="3. Відбір та інтеграція&lt;br&gt;&lt;b&gt;X&lt;sub&gt;b&lt;/sub&gt;, Z&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="840" y="120" width="260" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="4. Прийняття рішення&lt;br&gt;&lt;b&gt;S&lt;sub&gt;A&lt;/sub&gt;, D&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n4" value="4. Визначення припису&lt;br&gt;&lt;b&gt;S&lt;sub&gt;4&lt;/sub&gt;=⟨S&lt;sub&gt;A&lt;/sub&gt;,D&lt;sub&gt;A&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="650" y="380" width="280" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n5" value="5. Реєстрація результатів&lt;br&gt;&lt;b&gt;S&lt;sub&gt;T&lt;/sub&gt;, R&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n5" value="5. Реєстрація результатів&lt;br&gt;&lt;b&gt;S&lt;sub&gt;5&lt;/sub&gt;=F&lt;sub&gt;R&lt;/sub&gt;(S&lt;sub&gt;4&lt;/sub&gt;,C&lt;sub&gt;R&lt;/sub&gt;)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="240" y="380" width="280" height="75" as="geometry"/>
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n1" target="n2">

@@ -11,13 +11,13 @@
         <mxCell id="n2" value="Ізоляція об’єкта" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="440" y="135" width="260" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n3" value="Повний цикл аналізу&lt;br&gt;&lt;b&gt;T&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n3" value="Формування аналітичного стану&lt;br&gt;&lt;b&gt;S&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="440" y="240" width="260" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="Зареєстрований стан&lt;br&gt;&lt;b&gt;S&lt;sub&gt;T&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n4" value="Правило реагування&lt;br&gt;&lt;b&gt;D&lt;sub&gt;A&lt;/sub&gt;=F&lt;sub&gt;A&lt;/sub&gt;(S&lt;sub&gt;A&lt;/sub&gt;,C&lt;sub&gt;p&lt;/sub&gt;,θ&lt;sub&gt;p&lt;/sub&gt;)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="440" y="345" width="260" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n5" value="Політика реагування&lt;br&gt;&lt;b&gt;F&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n5" value="Зареєстрований результат&lt;br&gt;&lt;b&gt;S&lt;sub&gt;5&lt;/sub&gt;=F&lt;sub&gt;R&lt;/sub&gt;(S&lt;sub&gt;4&lt;/sub&gt;,C&lt;sub&gt;R&lt;/sub&gt;)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="440" y="450" width="260" height="64" as="geometry"/>
         </mxCell>
         <mxCell id="n6" value="Допуск" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
@@ -29,7 +29,7 @@
         <mxCell id="n8" value="Блокування" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="525" y="650" width="170" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n9" value="Реконструкція кандидата&lt;br&gt;&lt;b&gt;X&lt;sub&gt;mm,j&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n9" value="Реконструйований об’єкт&lt;br&gt;&lt;b&gt;X&lt;sub&gt;mm,j&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="765" y="645" width="240" height="74" as="geometry"/>
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n1" target="n2">

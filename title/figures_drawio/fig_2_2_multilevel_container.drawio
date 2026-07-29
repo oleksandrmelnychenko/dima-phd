@@ -14,13 +14,13 @@
         <mxCell id="n3" value="Структурні дані&lt;br&gt;&lt;b&gt;X&lt;sub&gt;s&lt;/sub&gt;, X&lt;sub&gt;m&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="290" y="280" width="220" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="Передоброблений статичний вхід&lt;br&gt;&lt;b&gt;X&lt;sub&gt;c&lt;/sub&gt;=⟨X&lt;sub&gt;mm&lt;/sub&gt;,X&lt;sub&gt;v&lt;/sub&gt;,X&lt;sub&gt;s&lt;/sub&gt;,X&lt;sub&gt;m&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n4" value="Статичні дані після попереднього опрацювання&lt;br&gt;&lt;b&gt;X&lt;sub&gt;c&lt;/sub&gt;=⟨X&lt;sub&gt;mm&lt;/sub&gt;,X&lt;sub&gt;v&lt;/sub&gt;,X&lt;sub&gt;s&lt;/sub&gt;,X&lt;sub&gt;m&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="540" y="185" width="270" height="74" as="geometry"/>
         </mxCell>
         <mxCell id="n5" value="Причинно пов’язані події&lt;br&gt;&lt;b&gt;X&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="290" y="460" width="220" height="64" as="geometry"/>
         </mxCell>
-        <mxCell id="n6" value="Доступність і контекст&lt;br&gt;&lt;b&gt;(m&lt;sub&gt;A&lt;/sub&gt;, C)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n6" value="Доступність і супровідні&lt;br&gt;відомості &lt;b&gt;(m&lt;sub&gt;A&lt;/sub&gt;, C)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="570" y="420" width="220" height="64" as="geometry"/>
         </mxCell>
         <mxCell id="n7" value="Повний вхід моделі&lt;br&gt;&lt;b&gt;X&lt;sub&gt;A&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
