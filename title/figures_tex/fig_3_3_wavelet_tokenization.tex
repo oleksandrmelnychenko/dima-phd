@@ -1,29 +1,33 @@
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=2.85cm] (visual) at (-5.65,2.20)
-  {Зорові дані\\$X_v$};
-\node[dissertation block,text width=4.10cm] (transforms) at (-2.05,2.20)
-  {Дискретне косинусне перетворення, дискретне хвилькове перетворення та залишкові фільтри};
-\node[dissertation block,text width=2.85cm] (frequency) at (1.75,2.20)
-  {Частотні дані\\$X_f$};
-\node[dissertation block,text width=3.15cm] (deterministic) at (-0.30,-0.20)
-  {Детерміноване подання\\$z_d$};
-\node[dissertation block,dashed,text width=3.15cm] (sequence) at (3.55,-0.20)
-  {Упорядковані локальні описи};
-\node[dissertation block,dashed,text width=3.15cm] (learned) at (3.55,-2.45)
-  {Подання, сформоване навченою моделлю};
-\node[dissertation block,text width=3.45cm] (output) at (-0.30,-3.65)
-  {Спектрально-зорові ознаки\\$Z_v,L_v$};
+\node[dissertation block,text width=3.20cm] (visual) at (-5.80,3.00)
+  {Вхід за $m_v=1$\\
+   $X_v,X_t,\theta_v$};
+\node[dissertation block,text width=4.00cm] (transforms) at (-1.80,3.00)
+  {Локальні характеристики, дискретне косинусне й хвилькове перетворення, залишкові фільтри\\
+   $X_f$};
+\node[dissertation block,text width=3.60cm] (local) at (2.45,3.00)
+  {Локальні описи з просторово-часовими координатами};
+
+\node[dissertation block,text width=3.60cm] (deterministic) at (-0.40,0.20)
+  {Покомпонентні середні та найбільші значення\\
+   $z_d$};
+\node[dissertation block,text width=3.80cm] (output) at (-0.40,-2.40)
+  {Підтверджена конфігурація\\
+   $Z_v=z_d,\;L_v$};
+\node[dissertation block,dashed,text width=3.70cm] (sequence) at (4.35,0.20)
+  {Упорядкування локальних описів за простором, масштабом і часом};
+\node[dissertation block,dashed,text width=3.90cm] (learned) at (4.35,-2.40)
+  {Модель кодування не побудовано й не перевірено незалежно};
 
 \draw[dissertation arrow] (visual.east) -- (transforms.west);
-\draw[dissertation arrow] (transforms.east) -- (frequency.west);
-\draw[dissertation arrow] (frequency.south) -- ++(0,-0.40) -| (deterministic.north);
-\draw[dissertation arrow,dashed] (frequency.south) -- ++(0,-0.40) -| (sequence.north);
-\draw[dissertation arrow,dashed] (sequence.south) -- (learned.north);
+\draw[dissertation arrow] (transforms.east) -- (local.west);
+\draw[dissertation arrow] (local.240) -- (deterministic.north);
+\draw[dissertation arrow,dashed] (local.300) -- (sequence.north);
 \draw[dissertation arrow] (deterministic.south) -- (output.north);
-\draw[dissertation arrow,dashed] (learned.south) |- (output.east);
+\draw[dissertation arrow,dashed] (sequence.south) -- (learned.north);
 \end{tikzpicture}
-\caption{Формування спектрально-зорових ознак у детермінованій конфігурації та можливому розширенні на основі навченої моделі}
+\caption{Формування спектрально-зорових ознак у підтвердженій детермінованій конфігурації та межа неперевіреного розширення}
 \label{fig:wavelet_tokenization}
 \end{figure}

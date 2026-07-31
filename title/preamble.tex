@@ -43,6 +43,11 @@
 \captionsetup{font=small,labelfont=normalfont,labelsep=endash,justification=centering}
 \captionsetup[figure]{name=Рисунок,position=bottom}
 \captionsetup[table]{name=Таблиця,position=top}
+\floatstyle{plaintop}
+\newfloat{algorithm}{tbp}{loa}[chapter]
+\floatname{algorithm}{Алгоритм}
+\captionsetup[algorithm]{name=Алгоритм,position=top,font=normalsize,
+  justification=raggedright,singlelinecheck=false}
 \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
 \renewcommand{\thetable}{\thechapter.\arabic{table}}
 
@@ -64,7 +69,7 @@
 \usepackage{xurl}
 \usepackage[hidelinks,unicode]{hyperref}
 \hypersetup{
-  pdftitle={Інформаційна технологія виявлення аномальних кодів у фото- та відеооб’єктах вебресурсів},
+  pdftitle={Інформаційна технологія виявлення ознак аномального вмісту в мультимедійних даних вебсередовища},
   pdfauthor={Дмитро Денисюк},
   pdfsubject={Дисертація на здобуття ступеня доктора філософії}
 }

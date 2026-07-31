@@ -1,25 +1,40 @@
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=3.35cm] (visual) at (-4.75,2.15)
-  {Спектрально-зорові ознаки\\$Z_v,L_v$};
-\node[dissertation block,text width=3.35cm] (structural) at (0,2.15)
-  {Структурні ознаки\\$Z_s,L_s$};
-\node[dissertation block,text width=3.35cm] (behavior) at (4.75,2.15)
-  {Подієво-поведінкові ознаки\\$Z_b$};
-\node[dissertation block,text width=3.30cm] (context) at (-3.15,-0.55)
-  {Доступність і супровідні\\відомості $m_A,C_I$};
-\node[dissertation block,text width=3.30cm] (integration) at (0.95,-0.55)
-  {Узгоджене об’єднання ознак\\$F_I$};
-\node[dissertation block,text width=3.65cm] (joint) at (5.05,-0.55)
-  {Інтегроване представлення\\$Z=\langle z,L,m_A,C_I\rangle$};
+\node[dissertation small,text width=4.25cm] (static) at (-5.05,2.20)
+  {Вхід 1. Статичний опис\\
+   $H=\langle Z_v,Z_s,\rho_v,\rho_s,$\\
+   $L_v,L_s,m_c,C_H\rangle$};
+\node[dissertation small,text width=4.25cm] (behavior) at (-5.05,0.35)
+  {Вхід 2. Подієво-поведінкове\\
+   представлення $Z_b$};
+\node[dissertation small,text width=4.25cm] (context) at (-5.05,-1.35)
+  {Вхід 3. Маска доступності\\
+   та відомості $m_A,C_I,\theta_I$};
 
-\draw[dissertation arrow] (visual.south) -- ++(0,-0.45) -| (integration.north);
-\draw[dissertation arrow] (structural.south) -- (integration.north);
-\draw[dissertation arrow] (behavior.south) -- ++(0,-0.45) -| (integration.north);
-\draw[dissertation arrow] (context.east) -- (integration.west);
+\node[dissertation small,text width=4.10cm] (validation) at (-0.65,0.35)
+  {Перевірка ідентифікатора,\\
+   контрольних сум і версій схем,\\
+   а також причинної належності подій};
+\node[dissertation small,text width=3.25cm] (integration) at (3.25,0.35)
+  {Умови виконано\\
+   Узгоджене об’єднання\\
+   функцією $F_I$};
+\node[dissertation small,text width=3.30cm] (joint) at (6.65,0.35)
+  {Вихід. Інтегроване\\
+   представлення\\
+   $Z=\langle z,L,m_A,C_I\rangle$};
+\node[dissertation small,text width=3.70cm,minimum height=11mm,inner sep=4pt] (stop) at (-0.65,-1.75)
+  {Умови не виконано\\
+   Представлення $Z$ не формують};
+
+\draw[dissertation arrow] (static.east) -- (validation.155);
+\draw[dissertation arrow] (behavior.east) -- (validation.west);
+\draw[dissertation arrow] (context.east) -- (validation.205);
+\draw[dissertation arrow] (validation.east) -- (integration.west);
 \draw[dissertation arrow] (integration.east) -- (joint.west);
+\draw[dissertation arrow] (validation.south) -- (stop.north);
 \end{tikzpicture}
-\caption{Формування інтегрованого представлення ознак у межах єдиної моделі}
+\caption{Вхідні дані, перевірка узгодженості та результат формування інтегрованого представлення}
 \label{fig:feature_space}
 \end{figure}

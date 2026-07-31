@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-31T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="fig_4_8_structural_benign_controls" name="Page-1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Реакція структурної гілки на допустиму контейнерну варіативність" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="165" y="35" width="840" height="40" as="geometry"/></mxCell>
+        <mxCell id="axisY" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="105" y="100" width="1" height="430" as="geometry"/></mxCell>
+        <mxCell id="axisX" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="105" y="530" width="980" height="1" as="geometry"/></mxCell>
+        <mxCell id="g1" value="PNG 0,04&#xa;WebM 1,00" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="145" y="360" width="170" height="170" as="geometry"/></mxCell>
+        <mxCell id="g2" value="PNG 0,18&#xa;WebM 1,00" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d4d4d4;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="385" y="340" width="170" height="190" as="geometry"/></mxCell>
+        <mxCell id="g3" value="PNG, JPEG, WebP, MP4, WebM: 1,00" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#aaaaaa;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="625" y="100" width="170" height="430" as="geometry"/></mxCell>
+        <mxCell id="g4" value="JPEG 1,00&#xa;WebM 1,00" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#777777;strokeColor=#000000;fontColor=#ffffff;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="865" y="255" width="170" height="275" as="geometry"/></mxCell>
+        <mxCell id="l1" value="Початкові контрольні" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="145" y="540" width="170" height="35" as="geometry"/></mxCell>
+        <mxCell id="l2" value="Службові відомості" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="385" y="540" width="170" height="35" as="geometry"/></mxCell>
+        <mxCell id="l3" value="Розширення або відступ" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="625" y="540" width="170" height="35" as="geometry"/></mxCell>
+        <mxCell id="l4" value="Повторне кодування" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="865" y="540" width="170" height="35" as="geometry"/></mxCell>
+        <mxCell id="axisLabel" value="Частка хибнопозитивних рішень" style="text;html=1;align=center;fontSize=14;fontColor=#000000;rotation=-90;" vertex="1" parent="1"><mxGeometry x="20" y="270" width="140" height="30" as="geometry"/></mxCell>
+        <mxCell id="note" value="У TikZ-редакції кожна група містить окремі стовпці PNG, JPEG, WebP, MP4 і WebM." style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="235" y="630" width="700" height="40" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

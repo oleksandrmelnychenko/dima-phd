@@ -11,8 +11,8 @@
   {Причинний відбір і явні\\правила $X_b,Z_r$};
 \node[dissertation block,dashed,text width=3.25cm] (states) at (2.60,1.15)
   {Неперевірені послідовнісні стани\\$U_b$};
-\node[dissertation block,dashed,text width=3.25cm] (attention) at (2.60,-0.95)
-  {Необов’язкове перехресне\\зіставлення $A$};
+\node[dissertation block,dashed,text width=3.65cm] (attention) at (3.00,-1.05)
+  {Неперевірене перехресне зіставлення $A$; до дослідного виходу не входить};
 \node[dissertation block,text width=3.25cm] (integration) at (0,-2.85)
   {Інтеграція ознак\\$F_I$};
 \node[dissertation block,text width=3.25cm] (joint) at (0,-4.65)
@@ -23,15 +23,13 @@
 \draw[dissertation arrow,dashed] ([xshift=0.65cm]events.south)
   -- ++(0,-0.45) -| (states.north);
 \draw[dissertation arrow,dashed] (states.south) -- (attention.north);
-\draw[dissertation arrow] (profile.west) -- ++(-0.45,0) |- (integration.west);
+\draw[dissertation arrow] (profile.south) -- ++(0,-0.45) -| (integration.west);
 \draw[dissertation arrow,dashed] (context.east) -- ++(0.45,0) |- (attention.east);
 \draw[dissertation arrow] (context.west) -- ++(-0.45,0) |- (integration.east);
 \draw[dissertation arrow] (rules.south) -- ++(0,-0.45)
   -| ([xshift=-0.65cm]integration.north);
-\draw[dissertation arrow,dashed] (attention.south) -- ++(0,-0.45)
-  -| ([xshift=0.65cm]integration.north);
 \draw[dissertation arrow] (integration.south) -- (joint.north);
 \end{tikzpicture}
-\caption{Метод поведінкового узгодження ознак різного походження для фото- та відеооб’єктів вебресурсів}
+\caption{Підтверджена та неперевірена гілки формалізованої процедури поведінкового узгодження}
 \label{fig:behavior_alignment}
 \end{figure}
