@@ -65,6 +65,7 @@ def parse_equations(text: str) -> list[dict[str, object]]:
         for raw in body.splitlines():
             clean = re.sub(r"%.*$", "", raw).strip()
             clean = re.sub(r"\\label\{[^}]+\}", "", clean).strip()
+            clean = re.sub(r"\\(?:begin|end)\{gathered\}", "", clean).strip()
             if clean:
                 significant.append(clean)
         last = significant[-1] if significant else ""

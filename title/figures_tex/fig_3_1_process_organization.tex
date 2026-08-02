@@ -1,25 +1,45 @@
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=2.70cm] (object) at (-5.00,1.15)
-  {Початковий об’єкт\\$X_{mm}$};
-\node[dissertation block,text width=2.70cm] (static) at (-1.95,1.15)
-  {Статичні дані\\$X_c$};
-\node[dissertation block,text width=2.80cm] (profile) at (1.15,1.15)
-  {Статичний опис\\$H$};
-\node[dissertation block,text width=3.20cm] (events) at (-2.25,-1.15)
-  {Відбір подій\\$J_b\rightarrow X_b$};
-\node[dissertation block,text width=2.85cm] (joint) at (1.15,-1.15)
-  {Інтегроване представлення\\$Z$};
-\node[dissertation block,text width=2.80cm] (state) at (4.40,-1.15)
-  {Аналітичний стан\\$S_A$};
+\begin{tikzpicture}[x=1cm,y=1cm,scale=0.93,transform shape]
+\node[dissertation small,text width=2.35cm,minimum height=12mm] (object) at (-6.35,1.25)
+  {Вхід 1\\Об’єкт $X_{mm}$};
+\node[dissertation small,text width=2.75cm,minimum height=12mm] (staticop) at (-3.25,1.25)
+  {Формування $X_c$\\
+   Статичний аналіз $F_H$};
+\node[dissertation small,text width=1.85cm,minimum height=12mm] (profile) at (-0.55,1.25)
+  {Вихід каналу\\Опис $H$};
 
-\draw[dissertation arrow] (object.east) -- (static.west);
-\draw[dissertation arrow] (static.east) -- (profile.west);
-\draw[dissertation arrow] (profile.south) -- (joint.north);
-\draw[dissertation arrow] (events.east) -- (joint.west);
+\node[dissertation small,text width=2.35cm,minimum height=12mm] (log) at (-6.35,-1.25)
+  {Вхід 2\\Журнал подій $J_b$};
+\node[dissertation small,text width=2.75cm,minimum height=12mm] (events) at (-3.25,-1.25)
+  {Причинний відбір\\
+   $J_b\!\rightarrow\!X_b$ і кодування $F_b$};
+\node[dissertation small,text width=1.85cm,minimum height=12mm] (behavior) at (-0.55,-1.25)
+  {Вихід каналу\\Ознаки $Z_b$};
+
+\node[dissertation small,text width=2.25cm,minimum height=15mm] (integration) at (2.05,0)
+  {Контроль походження\\
+   та доступності\\Інтеграція $F_I$};
+\node[dissertation small,text width=2.21cm,minimum height=12mm] (joint) at (4.85,0)
+  {Інтегроване\\представлення $Z$};
+\node[dissertation small,text width=2.30cm,minimum height=12mm] (state) at (7.65,0)
+  {Формування рішення $F_D$\\
+   Вихід: стан $S_A$};
+
+\node[dissertation container,fit=(object)(staticop)(profile),
+  label={[font=\footnotesize]above:Статичний канал}] {};
+\node[dissertation container,fit=(log)(events)(behavior),
+  label={[font=\footnotesize]below:Подієвий канал}] {};
+
+\draw[dissertation arrow] (object.east) -- (staticop.west);
+\draw[dissertation arrow] (staticop.east) -- (profile.west);
+\draw[dissertation arrow] (log.east) -- (events.west);
+\draw[dissertation arrow] (events.east) -- (behavior.west);
+\draw[dissertation arrow] (profile.east) -- (integration.155);
+\draw[dissertation arrow] (behavior.east) -- (integration.205);
+\draw[dissertation arrow] (integration.east) -- (joint.west);
 \draw[dissertation arrow] (joint.east) -- (state.west);
 \end{tikzpicture}
-\caption{Формування аналітичного стану зі статичного опису та початкового журналу подій}
+\caption{Роздільне формування статичного представлення та представлення ознак подій і поведінки з подальшим узгодженням}
 \label{fig:process_organization}
 \end{figure}

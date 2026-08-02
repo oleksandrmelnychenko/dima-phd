@@ -1,40 +1,45 @@
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation small,text width=4.25cm] (static) at (-5.05,2.20)
-  {Вхід 1. Статичний опис\\
+\begin{tikzpicture}[x=1cm,y=1cm,scale=0.95,transform shape,
+  decision/.style={diamond,draw=black,line width=0.8pt,fill=white,
+    aspect=1.45,align=center,font=\footnotesize,inner sep=1pt}]
+\node[dissertation small,text width=3.75cm] (static) at (-5.70,2.15)
+  {Вхід 1. Статичний опис\\[-1pt]
    $H=\langle Z_v,Z_s,\rho_v,\rho_s,$\\
    $L_v,L_s,m_c,C_H\rangle$};
-\node[dissertation small,text width=4.25cm] (behavior) at (-5.05,0.35)
-  {Вхід 2. Подієво-поведінкове\\
-   представлення $Z_b$};
-\node[dissertation small,text width=4.25cm] (context) at (-5.05,-1.35)
-  {Вхід 3. Маска доступності\\
+\node[dissertation small,text width=3.75cm] (behavior) at (-5.70,0.35)
+  {Вхід 2. Ознаки подій\\[-1pt]
+   і поведінки $Z_b$};
+\node[dissertation small,text width=3.75cm] (context) at (-5.70,-1.35)
+  {Вхід 3. Маска доступності\\[-1pt]
    та відомості $m_A,C_I,\theta_I$};
 
-\node[dissertation small,text width=4.10cm] (validation) at (-0.65,0.35)
-  {Перевірка ідентифікатора,\\
-   контрольних сум і версій схем,\\
-   а також причинної належності подій};
-\node[dissertation small,text width=3.25cm] (integration) at (3.25,0.35)
-  {Умови виконано\\
-   Узгоджене об’єднання\\
-   функцією $F_I$};
-\node[dissertation small,text width=3.30cm] (joint) at (6.65,0.35)
-  {Вихід. Інтегроване\\
-   представлення\\
+\node[dissertation small,text width=3.00cm,minimum height=18mm] (validation) at (-1.65,0.35)
+  {Перевірка даних\\[1pt]
+   ідентифікатор; SHA-256;\\
+   версії схем; походження;\\
+   причинна належність\\
+   подій};
+\node[decision,minimum width=1.80cm,minimum height=10mm] (condition) at (1.45,0.35)
+  {Узгоджено?};
+\node[dissertation small,text width=2.15cm,minimum height=13mm,inner sep=2pt] (integration) at (4.10,0.35)
+  {Узгоджене\\об’єднання\\$F_I$};
+\node[dissertation small,text width=2.85cm,minimum height=13mm,inner sep=2pt] (joint) at (7.00,0.35)
+  {Вихід: інтегроване\\
+   представлення\\[-1pt]
    $Z=\langle z,L,m_A,C_I\rangle$};
-\node[dissertation small,text width=3.70cm,minimum height=11mm,inner sep=4pt] (stop) at (-0.65,-1.75)
-  {Умови не виконано\\
-   Представлення $Z$ не формують};
+\node[dissertation small,text width=3.20cm,minimum height=11mm] (stop) at (1.45,-1.75)
+  {Інтеграцію припинено;\\
+   представлення $Z$ не формують};
 
 \draw[dissertation arrow] (static.east) -- (validation.155);
 \draw[dissertation arrow] (behavior.east) -- (validation.west);
 \draw[dissertation arrow] (context.east) -- (validation.205);
-\draw[dissertation arrow] (validation.east) -- (integration.west);
+\draw[dissertation arrow] (validation.east) -- (condition.west);
+\draw[dissertation arrow] (condition.east) -- node[above,font=\footnotesize,fill=white,inner sep=1pt]{так} (integration.west);
 \draw[dissertation arrow] (integration.east) -- (joint.west);
-\draw[dissertation arrow] (validation.south) -- (stop.north);
+\draw[dissertation arrow] (condition.south) -- node[right,font=\footnotesize,fill=white,inner sep=1pt]{ні} (stop.north);
 \end{tikzpicture}
-\caption{Вхідні дані, перевірка узгодженості та результат формування інтегрованого представлення}
+\caption{Послідовність перевірки узгодженості та формування інтегрованого представлення}
 \label{fig:feature_space}
 \end{figure}

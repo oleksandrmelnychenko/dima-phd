@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2026-07-30T10:30:00.000Z" agent="Codex" version="24.7.17">
+<mxfile host="app.diagrams.net" modified="2026-07-31T18:12:00.000Z" agent="Codex" version="24.7.17">
   <diagram id="fig23" name="Page-1">
-    <mxGraphModel dx="1169" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1400" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="n1" value="Вхід 1. Статичний опис&lt;br&gt;&lt;b&gt;H=⟨Z&lt;sub&gt;v&lt;/sub&gt;,Z&lt;sub&gt;s&lt;/sub&gt;,ρ&lt;sub&gt;v&lt;/sub&gt;,ρ&lt;sub&gt;s&lt;/sub&gt;,&lt;br&gt;L&lt;sub&gt;v&lt;/sub&gt;,L&lt;sub&gt;s&lt;/sub&gt;,m&lt;sub&gt;c&lt;/sub&gt;,C&lt;sub&gt;H&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="40" y="65" width="290" height="90" as="geometry"/>
+          <mxGeometry x="30" y="45" width="300" height="85" as="geometry"/>
         </mxCell>
         <mxCell id="n2" value="Вхід 2. Подієво-поведінкове&lt;br&gt;представлення &lt;b&gt;Z&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="40" y="190" width="290" height="75" as="geometry"/>
+          <mxGeometry x="30" y="175" width="300" height="75" as="geometry"/>
         </mxCell>
         <mxCell id="n3" value="Вхід 3. Маска доступності&lt;br&gt;та відомості &lt;b&gt;m&lt;sub&gt;A&lt;/sub&gt;,C&lt;sub&gt;I&lt;/sub&gt;,θ&lt;sub&gt;I&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="40" y="300" width="290" height="75" as="geometry"/>
+          <mxGeometry x="30" y="290" width="300" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="Перевірка ідентифікатора,&lt;br&gt;контрольних сум і версій схем,&lt;br&gt;а також причинної належності подій" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="390" y="175" width="270" height="100" as="geometry"/>
+        <mxCell id="n4" value="Перевірка даних&lt;br&gt;ідентифікатор; SHA-256;&lt;br&gt;версії схем; походження;&lt;br&gt;причинна належність подій" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=7;" vertex="1" parent="1">
+          <mxGeometry x="380" y="155" width="240" height="115" as="geometry"/>
         </mxCell>
-        <mxCell id="n5" value="Умови виконано&lt;br&gt;Узгоджене об’єднання&lt;br&gt;функцією &lt;b&gt;F&lt;sub&gt;I&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="725" y="180" width="245" height="90" as="geometry"/>
+        <mxCell id="n5" value="Узгоджено?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="670" y="170" width="145" height="85" as="geometry"/>
         </mxCell>
-        <mxCell id="n6" value="Вихід. Інтегроване&lt;br&gt;представлення&lt;br&gt;&lt;b&gt;Z=⟨z,L,m&lt;sub&gt;A&lt;/sub&gt;,C&lt;sub&gt;I&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="1025" y="175" width="250" height="100" as="geometry"/>
+        <mxCell id="n6" value="Узгоджене&lt;br&gt;об’єднання&lt;br&gt;&lt;b&gt;F&lt;sub&gt;I&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=7;" vertex="1" parent="1">
+          <mxGeometry x="865" y="175" width="180" height="75" as="geometry"/>
         </mxCell>
-        <mxCell id="n7" value="Умови не виконано&lt;br&gt;Представлення &lt;b&gt;Z&lt;/b&gt; не формують" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="405" y="350" width="240" height="70" as="geometry"/>
+        <mxCell id="n7" value="Вихід: інтегроване&lt;br&gt;представлення&lt;br&gt;&lt;b&gt;Z=⟨z,L,m&lt;sub&gt;A&lt;/sub&gt;,C&lt;sub&gt;I&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=7;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="170" width="270" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="n8" value="Інтеграцію припинено;&lt;br&gt;представлення &lt;b&gt;Z&lt;/b&gt; не формують" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=13;align=center;verticalAlign=middle;spacing=7;" vertex="1" parent="1">
+          <mxGeometry x="625" y="335" width="240" height="75" as="geometry"/>
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n1" target="n4">
           <mxGeometry relative="1" as="geometry"/>
@@ -35,13 +38,16 @@
         <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n3" target="n4">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;fontSize=12;" edge="1" parent="1" source="n4" target="n5">
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n4" target="n5">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n5" target="n6">
+        <mxCell id="e5" value="так" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n5" target="n6">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;fontSize=12;" edge="1" parent="1" source="n4" target="n7">
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n6" target="n7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="ні" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n5" target="n8">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
