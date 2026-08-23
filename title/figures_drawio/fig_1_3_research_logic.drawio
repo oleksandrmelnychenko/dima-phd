@@ -11,7 +11,7 @@
         <mxCell id="model" value="Модель мультимодального представлення&lt;br&gt;прихованої загрози" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
           <mxGeometry x="260" y="145" width="650" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="svs" value="Метод спектрально-зорового&lt;br&gt;та структурного аналізу" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+        <mxCell id="svs" value="Метод аналізу спектральних,&lt;br&gt;зорових і структурних ознак" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
           <mxGeometry x="70" y="295" width="470" height="70" as="geometry"/>
         </mxCell>
         <mxCell id="beh" value="Метод поведінкового узгодження&lt;br&gt;ознак різного походження" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">

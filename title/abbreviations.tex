@@ -1,9 +1,13 @@
 % !TeX root = main.tex
 \chapter*{ПЕРЕЛІК УМОВНИХ ПОЗНАЧЕНЬ, СИМВОЛІВ, ОДИНИЦЬ, СКОРОЧЕНЬ І ТЕРМІНІВ}
+\phantomsection
 \addcontentsline{toc}{chapter}{ПЕРЕЛІК УМОВНИХ ПОЗНАЧЕНЬ, СИМВОЛІВ, ОДИНИЦЬ, СКОРОЧЕНЬ І ТЕРМІНІВ}
 
 \begingroup
 \small
+% Longtable створює посилальну мітку навіть без назви. Службове значення
+% лічильника зберігає унікальну мітку table.0.1 для першої нумерованої таблиці.
+\setcounter{table}{-1}
 \begin{longtable}{>{\bfseries}p{0.22\textwidth}p{0.70\textwidth}}
 \multicolumn{2}{l}{\textbf{Скорочення та назви форматів}}\\
 AUC & площа під кривою залежності повноти від частки хибнопозитивних рішень;\\
@@ -71,5 +75,7 @@ $\varnothing$ & порожня, але доступна для спостере�
 об’єкт/с & кількість опрацьованих об’єктів за секунду.\\
 \end{longtable}
 \endgroup
+% The unnumbered list above must not shift numbering of the first content table.
+\setcounter{table}{0}
 
 \clearpage

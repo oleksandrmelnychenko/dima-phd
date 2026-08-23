@@ -8,7 +8,7 @@
         <mxCell id="n1" value="Вхід 1. Статичний опис&lt;br&gt;&lt;b&gt;H=⟨Z&lt;sub&gt;v&lt;/sub&gt;,Z&lt;sub&gt;s&lt;/sub&gt;,ρ&lt;sub&gt;v&lt;/sub&gt;,ρ&lt;sub&gt;s&lt;/sub&gt;,&lt;br&gt;L&lt;sub&gt;v&lt;/sub&gt;,L&lt;sub&gt;s&lt;/sub&gt;,m&lt;sub&gt;c&lt;/sub&gt;,C&lt;sub&gt;H&lt;/sub&gt;⟩&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="30" y="45" width="300" height="85" as="geometry"/>
         </mxCell>
-        <mxCell id="n2" value="Вхід 2. Подієво-поведінкове&lt;br&gt;представлення &lt;b&gt;Z&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n2" value="Вхід 2. Ознаки подій&lt;br&gt;і поведінки &lt;b&gt;Z&lt;sub&gt;b&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="30" y="175" width="300" height="75" as="geometry"/>
         </mxCell>
         <mxCell id="n3" value="Вхід 3. Маска доступності&lt;br&gt;та відомості &lt;b&gt;m&lt;sub&gt;A&lt;/sub&gt;,C&lt;sub&gt;I&lt;/sub&gt;,θ&lt;sub&gt;I&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">

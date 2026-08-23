@@ -7,7 +7,7 @@
   {Формування $X_c$\\
    Статичний аналіз $F_H$};
 \node[dissertation small,text width=1.85cm,minimum height=12mm] (profile) at (-0.55,1.25)
-  {Вихід каналу\\Опис $H$};
+  {Результат методу 1\\Опис $H$};
 
 \node[dissertation small,text width=2.35cm,minimum height=12mm] (log) at (-6.35,-1.25)
   {Вхід 2\\Журнал подій $J_b$};
@@ -15,21 +15,21 @@
   {Причинний відбір\\
    $J_b\!\rightarrow\!X_b$ і кодування $F_b$};
 \node[dissertation small,text width=1.85cm,minimum height=12mm] (behavior) at (-0.55,-1.25)
-  {Вихід каналу\\Ознаки $Z_b$};
+  {Проміжний результат\\Ознаки $Z_b$};
 
-\node[dissertation small,text width=2.25cm,minimum height=15mm] (integration) at (2.05,0)
-  {Контроль походження\\
+\node[dissertation small,text width=2.25cm,minimum height=18mm] (integration) at (2.05,0)
+  {Метод 2\\Контроль походження\\
    та доступності\\Інтеграція $F_I$};
 \node[dissertation small,text width=2.21cm,minimum height=12mm] (joint) at (4.85,0)
   {Інтегроване\\представлення $Z$};
 \node[dissertation small,text width=2.30cm,minimum height=12mm] (state) at (7.65,0)
-  {Формування рішення $F_D$\\
+  {Модельне рішення $F_D$\\
    Вихід: стан $S_A$};
 
 \node[dissertation container,fit=(object)(staticop)(profile),
-  label={[font=\footnotesize]above:Статичний канал}] {};
+  label={[font=\footnotesize]above:Метод 1: формування статичного опису}] {};
 \node[dissertation container,fit=(log)(events)(behavior),
-  label={[font=\footnotesize]below:Подієвий канал}] {};
+  label={[font=\footnotesize]below:Метод 2: причинно-фазовий відбір}] {};
 
 \draw[dissertation arrow] (object.east) -- (staticop.west);
 \draw[dissertation arrow] (staticop.east) -- (profile.west);
