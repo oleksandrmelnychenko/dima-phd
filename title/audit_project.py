@@ -65,6 +65,7 @@ def parse_equations(text: str) -> list[dict[str, object]]:
         for raw in body.splitlines():
             clean = re.sub(r"%.*$", "", raw).strip()
             clean = re.sub(r"\\label\{[^}]+\}", "", clean).strip()
+            clean = re.sub(r"\\(?:begin|end)\{gathered\}", "", clean).strip()
             if clean:
                 significant.append(clean)
         last = significant[-1] if significant else ""
@@ -236,15 +237,17 @@ def main() -> int:
         r"інтерфейс\w*|конвертац\w*)",
         re.I,
     )
-    file_word = re.compile(r"\bфайл\w*", re.I)
+    misleading_physical_file = re.compile(r"\bфізичн\w*\s+(?:MP4[- ]*)?файл\w*", re.I)
     for name in CORE_TEXTS:
         for number, line in enumerate(texts[name].splitlines(), 1):
             if hyphenated_web.search(line):
                 failures.append(f"{name}:{number} — нормативну форму вебресурс/вебсистема/вебсервер написано з дефісом")
             if terminology.search(line):
                 failures.append(f"{name}:{number} — термін не відповідає SKILL v1.3: {line.strip()}")
-            if file_word.search(line):
-                warnings.append(f"{name}:{number} — контекстно перевірити слово «файл»: {line.strip()}")
+            if misleading_physical_file.search(line):
+                warnings.append(
+                    f"{name}:{number} — контекстно перевірити словосполучення «фізичний файл»: {line.strip()}"
+                )
 
     for name in ("abstract_uk.tex", "abstract_en.tex"):
         plain = tex_plain(texts[name])

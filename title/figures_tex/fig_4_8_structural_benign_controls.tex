@@ -1,0 +1,60 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[->,thick] (0,0) -- (0,4.05);
+  \draw[->,thick] (0,0) -- (13.35,0);
+  \foreach \y/\v in {0/0,0.7/0{,}2,1.4/0{,}4,2.1/0{,}6,2.8/0{,}8,3.5/1{,}0}{
+    \draw (-0.06,\y) -- (0.06,\y);
+    \node[anchor=east,font=\footnotesize] at (-0.10,\y) {\v};
+    \draw[densely dotted] (0.08,\y) -- (13.2,\y);
+  }
+  \node[rotate=90,font=\footnotesize] at (-0.85,1.75)
+    {Частка хибнопозитивних рішень};
+
+  % Початкові контрольні: PNG, JPEG, WebP, MP4, WebM.
+  \filldraw[fill=black!10,draw=black] (0.45,0) rectangle (0.80,0.14);
+  \filldraw[fill=black!25,draw=black] (0.88,0) rectangle (1.23,0);
+  \filldraw[fill=black!40,draw=black] (1.31,0) rectangle (1.66,0);
+  \filldraw[fill=black!55,draw=black] (1.74,0) rectangle (2.09,0);
+  \filldraw[fill=black!70,draw=black] (2.17,0) rectangle (2.52,3.50);
+
+  % Допустимі службові відомості.
+  \filldraw[fill=black!10,draw=black] (3.55,0) rectangle (3.90,0.63);
+  \filldraw[fill=black!25,draw=black] (3.98,0) rectangle (4.33,0);
+  \filldraw[fill=black!40,draw=black] (4.41,0) rectangle (4.76,0);
+  \filldraw[fill=black!55,draw=black] (4.84,0) rectangle (5.19,0);
+  \filldraw[fill=black!70,draw=black] (5.27,0) rectangle (5.62,3.50);
+
+  % Допустимі розширення або відступи.
+  \filldraw[fill=black!10,draw=black] (6.65,0) rectangle (7.00,3.50);
+  \filldraw[fill=black!25,draw=black] (7.08,0) rectangle (7.43,3.50);
+  \filldraw[fill=black!40,draw=black] (7.51,0) rectangle (7.86,3.50);
+  \filldraw[fill=black!55,draw=black] (7.94,0) rectangle (8.29,3.50);
+  \filldraw[fill=black!70,draw=black] (8.37,0) rectangle (8.72,3.50);
+
+  % Повторне кодування або компонування.
+  \filldraw[fill=black!10,draw=black] (9.75,0) rectangle (10.10,0.07);
+  \filldraw[fill=black!25,draw=black] (10.18,0) rectangle (10.53,3.50);
+  \filldraw[fill=black!40,draw=black] (10.61,0) rectangle (10.96,0);
+  \filldraw[fill=black!55,draw=black] (11.04,0) rectangle (11.39,0);
+  \filldraw[fill=black!70,draw=black] (11.47,0) rectangle (11.82,3.50);
+
+  \node[font=\footnotesize,align=center] at (1.48,-0.46) {Початкові\\контрольні};
+  \node[font=\footnotesize,align=center] at (4.58,-0.46) {Службові\\відомості};
+  \node[font=\footnotesize,align=center] at (7.68,-0.46) {Розширення\\або відступ};
+  \node[font=\footnotesize,align=center] at (10.78,-0.46) {Повторне\\кодування};
+
+  \filldraw[fill=black!10,draw=black] (1.25,-1.22) rectangle (1.58,-0.97);
+  \node[anchor=west,font=\footnotesize] at (1.68,-1.095) {PNG};
+  \filldraw[fill=black!25,draw=black] (3.25,-1.22) rectangle (3.58,-0.97);
+  \node[anchor=west,font=\footnotesize] at (3.68,-1.095) {JPEG};
+  \filldraw[fill=black!40,draw=black] (5.45,-1.22) rectangle (5.78,-0.97);
+  \node[anchor=west,font=\footnotesize] at (5.88,-1.095) {WebP};
+  \filldraw[fill=black!55,draw=black] (7.65,-1.22) rectangle (7.98,-0.97);
+  \node[anchor=west,font=\footnotesize] at (8.08,-1.095) {MP4};
+  \filldraw[fill=black!70,draw=black] (9.75,-1.22) rectangle (10.08,-0.97);
+  \node[anchor=west,font=\footnotesize] at (10.18,-1.095) {WebM};
+\end{tikzpicture}
+\caption{Реакція структурної гілки на допустиму контейнерну варіативність у розвідувальному контрольному аналізі}
+\label{fig:structural_benign_controls}
+\end{figure}

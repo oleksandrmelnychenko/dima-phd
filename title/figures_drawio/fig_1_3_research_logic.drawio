@@ -1,2 +1,47 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" modified="2026-07-15T00:00:00.000Z" agent="Codex" version="24.7.17"><diagram id="fig_1_3_research_logic" name="Page-1"><mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="1" shadow="0"><root><mxCell id="0" /><mxCell id="1" parent="0" /><mxCell id="lim" value="Обмеження відомих підходів" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="460" y="35" width="250" height="42" as="geometry" /></mxCell><mxCell id="model" value="Модель мультимодального представлення&lt;br&gt;прихованої загрози" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="260" y="145" width="650" height="56" as="geometry" /></mxCell><mxCell id="svs" value="Метод спектрально-візуального&lt;br&gt;та структурного аналізу" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="70" y="295" width="470" height="70" as="geometry" /></mxCell><mxCell id="beh" value="Метод поведінково-мультимодального&lt;br&gt;узгодження ознак" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="630" y="295" width="490" height="70" as="geometry" /></mxCell><mxCell id="tech" value="Інформаційна технологія виявлення аномальних кодів&lt;br&gt;у мультимедійних об’єктах" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="270" y="500" width="640" height="60" as="geometry" /></mxCell><mxCell id="exp" value="Експериментальне оцінювання&lt;br&gt;та визначення доказових меж" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1"><mxGeometry x="425" y="665" width="330" height="56" as="geometry" /></mxCell><mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="lim" target="model"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="model" target="svs"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="model" target="beh"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="svs" target="tech"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="beh" target="tech"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="tech" target="exp"><mxGeometry relative="1" as="geometry" /></mxCell></root></mxGraphModel></diagram></mxfile>
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-15T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="fig_1_3_research_logic" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="1" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="lim" value="Обмеження відомих підходів" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="460" y="35" width="250" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="model" value="Модель мультимодального представлення&lt;br&gt;прихованої загрози" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="145" width="650" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="svs" value="Метод аналізу спектральних,&lt;br&gt;зорових і структурних ознак" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="70" y="295" width="470" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="beh" value="Метод поведінкового узгодження&lt;br&gt;ознак різного походження" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="630" y="295" width="490" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="tech" value="Інформаційна технологія виявлення ознак аномального вмісту&lt;br&gt;в мультимедійних даних вебсередовища" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="270" y="500" width="640" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="exp" value="Експериментальне оцінювання&lt;br&gt;та визначення доказових меж" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="425" y="665" width="330" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="lim" target="model">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="model" target="svs">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="model" target="beh">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="svs" target="tech">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="beh" target="tech">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="tech" target="exp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

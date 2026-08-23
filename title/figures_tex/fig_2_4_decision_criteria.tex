@@ -1,25 +1,46 @@
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=2.85cm] (joint) at (-5.55,0.35)
-  {Представлення\\$Z$};
-\node[dissertation block,text width=2.85cm] (decision) at (-2.15,0.35)
-  {Функція рішення\\$F_D$};
-\node[dissertation block,text width=2.85cm] (state) at (1.25,0.35)
-  {Аналітичний стан\\$S_A$};
-\node[dissertation block,text width=3.40cm] (classification) at (5.05,2.15)
-  {Визначення класу\\$p,\hat y,\hat k$};
-\node[dissertation block,text width=3.40cm] (risk) at (5.05,0.35)
-  {Ризик і упевненість\\$\rho_A,c_A$};
-\node[dissertation block,text width=3.40cm] (explanation) at (5.05,-1.45)
-  {Перевірюване пояснення\\$\Pi$};
+\node[dissertation small,text width=3.35cm] (joint) at (-5.55,1.75)
+  {Вхід 1. Інтегроване\\
+   представлення $Z$};
+\node[dissertation small,text width=3.35cm] (parameters) at (-5.55,0.15)
+  {Вхід 2. Параметри\\
+   формування рішення $\Theta_D$};
+\node[dissertation small,text width=3.35cm] (decision) at (-1.90,0.95)
+  {Функція формування рішення\\
+   $F_D(Z,\Theta_D)$};
+\node[dissertation small,text width=4.25cm] (state) at (2.45,0.95)
+  {Аналітичний стан\\
+   $S_A=\langle p,\hat y,\hat k,\rho_A,c_A,\Pi\rangle$};
 
-\draw[dissertation arrow] (joint.east) -- (decision.west);
+\node[dissertation small,text width=3.55cm] (classification) at (7.00,3.00)
+  {Класові оцінки\\
+   та висновок\\
+   $p,\hat y,\hat k$};
+\node[dissertation small,text width=3.55cm] (risk) at (7.00,1.65)
+  {Оцінка ризику\\
+   $\rho_A$};
+\node[dissertation small,text width=3.55cm] (confidence) at (7.00,0.30)
+  {Упевненість\\
+   $c_A$};
+\node[dissertation small,text width=3.55cm] (explanation) at (7.00,-1.05)
+  {Перевірюване пояснення\\
+   $\Pi$};
+\node[dissertation small,dashed,text width=4.25cm] (action) at (2.45,-1.45)
+  {Поза складом $S_A$\\
+   Правило реагування\\
+   та захисна дія};
+
+\draw[dissertation arrow] (joint.east) -- (decision.155);
+\draw[dissertation arrow] (parameters.east) -- (decision.205);
 \draw[dissertation arrow] (decision.east) -- (state.west);
-\draw[dissertation arrow] (state.east) -- ++(0.45,0) |- (classification.west);
-\draw[dissertation arrow] (state.east) -- (risk.west);
-\draw[dissertation arrow] (state.east) -- ++(0.45,0) |- (explanation.west);
+\draw[dissertation arrow] (state.east) -- ++(0.20,0) |- (classification.west);
+\draw[dissertation arrow] (state.east) -- ++(0.20,0) |- (risk.west);
+\draw[dissertation arrow] (state.east) -- ++(0.20,0) |- (confidence.west);
+\draw[dissertation arrow] (state.east) -- ++(0.20,0) |- (explanation.west);
+\draw[dissertation arrow,dashed] (state.south) -- (action.north);
 \end{tikzpicture}
-\caption{Формування аналітичного стану моделі без підміни його технологічною дією}
+\caption{Формування та склад аналітичного стану з відокремленням подальшої захисної дії}
 \label{fig:decision_criteria}
 \end{figure}

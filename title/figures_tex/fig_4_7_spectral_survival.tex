@@ -1,0 +1,95 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  % Ліва панель: PSNR.
+  \begin{scope}
+    \node[font=\small\bfseries] at (2.75,4.45) {Рівень залишкової відмінності};
+    \draw[->,thick] (0,0) -- (0,4.05);
+    \draw[->,thick] (0,0) -- (5.65,0);
+    \foreach \y/\v in {0/36,1.2/38,2.4/40,3.6/42}{
+      \draw (-0.06,\y) -- (0.06,\y);
+      \node[anchor=east,font=\footnotesize] at (-0.10,\y) {\v};
+      \draw[densely dotted] (0.08,\y) -- (5.5,\y);
+    }
+    \node[rotate=90,font=\footnotesize] at (-0.88,2.0) {PSNR, дБ};
+
+    \filldraw[fill=black!20,draw=black] (0.35,0) rectangle (1.05,2.806);
+    \filldraw[fill=black!30,draw=black] (1.45,0) rectangle (2.15,1.852);
+    \filldraw[fill=black!40,draw=black] (2.55,0) rectangle (3.25,1.585);
+    \filldraw[fill=black!50,draw=black] (3.65,0) rectangle (4.35,3.249);
+    \filldraw[fill=black!60,draw=black] (4.75,0) rectangle (5.45,2.141);
+
+    \draw[thick] (0.70,2.477) -- (0.70,3.141);
+    \draw[thick] (0.58,2.477) -- (0.82,2.477);
+    \draw[thick] (0.58,3.141) -- (0.82,3.141);
+    \draw[thick] (1.80,1.401) -- (1.80,2.295);
+    \draw[thick] (1.68,1.401) -- (1.92,1.401);
+    \draw[thick] (1.68,2.295) -- (1.92,2.295);
+    \draw[thick] (2.90,1.246) -- (2.90,1.923);
+    \draw[thick] (2.78,1.246) -- (3.02,1.246);
+    \draw[thick] (2.78,1.923) -- (3.02,1.923);
+    \draw[thick] (4.00,2.886) -- (4.00,3.573);
+    \draw[thick] (3.88,2.886) -- (4.12,2.886);
+    \draw[thick] (3.88,3.573) -- (4.12,3.573);
+    \draw[thick] (5.10,1.840) -- (5.10,2.414);
+    \draw[thick] (4.98,1.840) -- (5.22,1.840);
+    \draw[thick] (4.98,2.414) -- (5.22,2.414);
+
+    \node[font=\footnotesize] at (0.70,3.35) {40,68};
+    \node[font=\footnotesize] at (1.80,2.52) {39,09};
+    \node[font=\footnotesize] at (2.90,2.15) {38,64};
+    \node[font=\footnotesize] at (4.00,3.78) {41,41};
+    \node[font=\footnotesize] at (5.10,2.64) {39,57};
+    \foreach \x/\v in {0.70/PNG,1.80/JPEG,2.90/WebP,4.00/MP4,5.10/WebM}{
+      \node[font=\footnotesize] at (\x,-0.28) {\v};
+    }
+  \end{scope}
+
+  % Права панель: частка змінених декодованих відліків.
+  \begin{scope}[xshift=7.25cm]
+    \node[font=\small\bfseries,text width=5.6cm,align=center] at (2.75,4.45)
+      {Поширеність відмінності\\після декодування};
+    \draw[->,thick] (0,0) -- (0,4.05);
+    \draw[->,thick] (0,0) -- (5.65,0);
+    \foreach \y/\v in {0/0{,}45,0.7/0{,}50,1.4/0{,}55,2.1/0{,}60,2.8/0{,}65,3.5/0{,}70}{
+      \draw (-0.06,\y) -- (0.06,\y);
+      \node[anchor=east,font=\footnotesize] at (-0.10,\y) {\v};
+      \draw[densely dotted] (0.08,\y) -- (5.5,\y);
+    }
+    \node[rotate=90,font=\footnotesize] at (-1.08,2.0) {Частка змінених відліків};
+
+    \filldraw[fill=black!20,draw=black] (0.35,0) rectangle (1.05,2.006);
+    \filldraw[fill=black!30,draw=black] (1.45,0) rectangle (2.15,2.734);
+    \filldraw[fill=black!40,draw=black] (2.55,0) rectangle (3.25,2.732);
+    \filldraw[fill=black!50,draw=black] (3.65,0) rectangle (4.35,0.987);
+    \filldraw[fill=black!60,draw=black] (4.75,0) rectangle (5.45,1.904);
+
+    \draw[thick] (0.70,1.835) -- (0.70,2.179);
+    \draw[thick] (0.58,1.835) -- (0.82,1.835);
+    \draw[thick] (0.58,2.179) -- (0.82,2.179);
+    \draw[thick] (1.80,2.597) -- (1.80,2.873);
+    \draw[thick] (1.68,2.597) -- (1.92,2.597);
+    \draw[thick] (1.68,2.873) -- (1.92,2.873);
+    \draw[thick] (2.90,2.579) -- (2.90,2.882);
+    \draw[thick] (2.78,2.579) -- (3.02,2.579);
+    \draw[thick] (2.78,2.882) -- (3.02,2.882);
+    \draw[thick] (4.00,0.783) -- (4.00,1.179);
+    \draw[thick] (3.88,0.783) -- (4.12,0.783);
+    \draw[thick] (3.88,1.179) -- (4.12,1.179);
+    \draw[thick] (5.10,1.734) -- (5.10,2.054);
+    \draw[thick] (4.98,1.734) -- (5.22,1.734);
+    \draw[thick] (4.98,2.054) -- (5.22,2.054);
+
+    \node[font=\footnotesize] at (0.70,2.40) {0,593};
+    \node[font=\footnotesize] at (1.80,3.10) {0,645};
+    \node[font=\footnotesize] at (2.90,3.10) {0,645};
+    \node[font=\footnotesize] at (4.00,1.40) {0,521};
+    \node[font=\footnotesize] at (5.10,2.28) {0,586};
+    \foreach \x/\v in {0.70/PNG,1.80/JPEG,2.90/WebP,4.00/MP4,5.10/WebM}{
+      \node[font=\footnotesize] at (\x,-0.28) {\v};
+    }
+  \end{scope}
+\end{tikzpicture}
+\caption{Збереження парної спектральної відмінності після декодування кінцевих форматів (стовпці --- середні за відеоджерелами; відрізки --- 95~\% блокові інтервали повторного вибирання)}
+\label{fig:spectral_survival}
+\end{figure}

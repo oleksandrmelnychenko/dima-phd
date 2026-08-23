@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2026-07-15T12:00:00.000Z" agent="Codex" version="24.7.17">
+<mxfile host="app.diagrams.net" modified="2026-07-30T12:00:00.000Z" agent="Codex" version="24.7.17">
   <diagram id="fig33" name="Page-1">
     <mxGraphModel dx="1169" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="n1" value="Зорові дані&lt;br&gt;&lt;b&gt;X&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="30" y="100" width="180" height="64" as="geometry"/>
+        <mxCell id="n1" value="Вхід за &lt;b&gt;m&lt;sub&gt;v&lt;/sub&gt; = 1&lt;/b&gt;&lt;br&gt;&lt;b&gt;X&lt;sub&gt;v&lt;/sub&gt;, X&lt;sub&gt;t&lt;/sub&gt;, θ&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="210" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="n2" value="Дискретне косинусне, дискретне хвилькове&lt;br&gt;та залишкові перетворення" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="260" y="90" width="250" height="80" as="geometry"/>
+        <mxCell id="n2" value="Локальні характеристики, дискретне косинусне й хвилькове перетворення, залишкові фільтри&lt;br&gt;&lt;b&gt;X&lt;sub&gt;f&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="300" height="110" as="geometry"/>
         </mxCell>
-        <mxCell id="n3" value="Частотні дані&lt;br&gt;&lt;b&gt;X&lt;sub&gt;f&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="560" y="100" width="180" height="64" as="geometry"/>
+        <mxCell id="n3" value="Локальні описи з просторово-часовими координатами" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="650" y="100" width="260" height="90" as="geometry"/>
         </mxCell>
-        <mxCell id="n4" value="Детерміноване подання&lt;br&gt;&lt;b&gt;z&lt;sub&gt;d&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="330" y="310" width="210" height="70" as="geometry"/>
+        <mxCell id="n4" value="Покомпонентні середні та найбільші значення&lt;br&gt;&lt;b&gt;z&lt;sub&gt;d&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="350" y="330" width="260" height="90" as="geometry"/>
         </mxCell>
-        <mxCell id="n5" value="Упорядковані локальні описи" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
-          <mxGeometry x="690" y="310" width="220" height="70" as="geometry"/>
+        <mxCell id="n5" value="Упорядкування локальних описів за простором, масштабом і часом" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry x="750" y="330" width="280" height="100" as="geometry"/>
         </mxCell>
-        <mxCell id="n6" value="Подання, сформоване&lt;br&gt;навченою моделлю" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
-          <mxGeometry x="690" y="480" width="220" height="70" as="geometry"/>
+        <mxCell id="n6" value="Модель кодування не побудовано й не перевірено незалежно" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry x="750" y="560" width="300" height="90" as="geometry"/>
         </mxCell>
-        <mxCell id="n7" value="Спектрально-зорові ознаки&lt;br&gt;&lt;b&gt;Z&lt;sub&gt;v&lt;/sub&gt;, L&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="330" y="550" width="260" height="70" as="geometry"/>
+        <mxCell id="n7" value="Підтверджена конфігурація&lt;br&gt;&lt;b&gt;Z&lt;sub&gt;v&lt;/sub&gt; = z&lt;sub&gt;d&lt;/sub&gt;, L&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="350" y="560" width="280" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n1" target="n2">
           <mxGeometry relative="1" as="geometry"/>
@@ -42,9 +42,6 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="n4" target="n7">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="n6" target="n7">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>

@@ -1,37 +1,46 @@
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=3.25cm] (profile) at (-4.80,3.45)
-  {Статичний опис\\$H$};
-\node[dissertation block,text width=3.25cm] (events) at (0,3.45)
-  {Початковий журнал\\$J_b$};
-\node[dissertation block,text width=3.25cm] (context) at (4.80,3.45)
-  {Доступність і супровідні\\відомості $m_A,C_I$};
-\node[dissertation block,text width=3.25cm] (rules) at (-2.60,1.15)
-  {Причинний відбір і явні\\правила $X_b,Z_r$};
-\node[dissertation block,dashed,text width=3.25cm] (states) at (2.60,1.15)
-  {Неперевірені послідовнісні стани\\$U_b$};
-\node[dissertation block,dashed,text width=3.25cm] (attention) at (2.60,-0.95)
-  {Необов’язкове перехресне\\зіставлення $A$};
-\node[dissertation block,text width=3.25cm] (integration) at (0,-2.85)
-  {Інтеграція ознак\\$F_I$};
-\node[dissertation block,text width=3.25cm] (joint) at (0,-4.65)
-  {Інтегроване представлення\\$Z$};
+\begin{tikzpicture}[x=1cm,y=1cm,scale=0.91,transform shape]
+\node[dissertation small,text width=3.10cm,minimum height=11mm] (profile) at (-4.85,5.55)
+  {Вхід 1\\Статичний опис $H$};
+\node[dissertation small,text width=3.10cm,minimum height=11mm] (events) at (0,5.55)
+  {Вхід 2\\Початковий журнал $J_b$};
+\node[dissertation small,text width=3.10cm,minimum height=11mm] (context) at (4.85,5.55)
+  {Вхід 3\\$m_A,C_I,\theta_b,\theta_r,\theta_I$};
 
-\draw[dissertation arrow] ([xshift=-0.65cm]events.south)
-  -- ++(0,-0.45) -| (rules.north);
-\draw[dissertation arrow,dashed] ([xshift=0.65cm]events.south)
-  -- ++(0,-0.45) -| (states.north);
-\draw[dissertation arrow,dashed] (states.south) -- (attention.north);
-\draw[dissertation arrow] (profile.west) -- ++(-0.45,0) |- (integration.west);
-\draw[dissertation arrow,dashed] (context.east) -- ++(0.45,0) |- (attention.east);
-\draw[dissertation arrow] (context.west) -- ++(-0.45,0) |- (integration.east);
-\draw[dissertation arrow] (rules.south) -- ++(0,-0.45)
-  -| ([xshift=-0.65cm]integration.north);
-\draw[dissertation arrow,dashed] (attention.south) -- ++(0,-0.45)
-  -| ([xshift=0.65cm]integration.north);
+\node[dissertation block,text width=9.20cm,minimum height=11mm] (control) at (0,4.05)
+  {Контроль входу: цілісність $H$, походження $J_b$, ідентифікатори,\\часові межі та сумісність версій};
+\node[dissertation block,text width=6.70cm,minimum height=11mm] (admissible) at (0,2.35)
+  {Перевірка журналу: придатність, походження\\і покриття обов’язкових фаз};
+
+\node[dissertation small,text width=3.55cm,minimum height=13mm] (partialint) at (-4.85,0.40)
+  {Неповна інтеграція\\$F_I(H,\bot,m_A,C_I^{\partial};\theta_I)$};
+\node[dissertation small,text width=3.55cm,minimum height=13mm] (partialout) at (-4.85,-1.95)
+  {Неповний вихід\\$Z^{\partial}$, $m_b=0$\\причина неповноти};
+
+\node[dissertation block,text width=5.30cm,minimum height=15mm] (selection) at (0,0.40)
+  {Причинно-фазовий відбір $P_b$: $d(e)=1$, $J_b\rightarrow X_b$\\$X_b=\varnothing$, $T=0$ або $T>0$; $m_b=1$};
+\node[dissertation block,text width=5.30cm,minimum height=13mm] (encoding) at (0,-1.45)
+  {Кодування подій $E_b$ і каталог правил $F_r$\\$Z_b=Z_r$, $\rho_b$, $Q_A$};
+\node[dissertation small,dashed,text width=3.45cm,minimum height=14mm] (extension) at (4.85,-0.95)
+  {Поза перевіреною конфігурацією\\$U_b$, $A$; до виходу методу не входять};
+\node[dissertation block,text width=6.60cm,minimum height=12mm] (integration) at (0,-3.10)
+  {Зіставлення зі статичними координатами та інтеграція\\$F_I(H,Z_b,m_A,C_I;\theta_I)$};
+\node[dissertation block,text width=6.60cm,minimum height=12mm] (joint) at (0,-4.75)
+  {Повний вихід методу\\$Z=\langle z,L,m_A,C_I\rangle$};
+
+\draw[dissertation arrow] (profile.south) -- ([xshift=-2.7cm]control.north);
+\draw[dissertation arrow] (events.south) -- (control.north);
+\draw[dissertation arrow] (context.south) -- ([xshift=2.7cm]control.north);
+\draw[dissertation arrow] (control.south) -- (admissible.north);
+\draw[dissertation arrow] (admissible.south) -- (selection.north);
+\draw[dissertation arrow] (admissible.west) -- node[above,font=\footnotesize]{умови не виконано} ++(-0.75,0) -| (partialint.north);
+\draw[dissertation arrow] (partialint.south) -- (partialout.north);
+\draw[dissertation arrow] (selection.south) -- (encoding.north);
+\draw[dissertation arrow] (encoding.south) -- (integration.north);
 \draw[dissertation arrow] (integration.south) -- (joint.north);
+\draw[dashed,line width=0.8pt,draw=black] (selection.east) -- (extension.west);
 \end{tikzpicture}
-\caption{Метод поведінкового узгодження ознак різного походження для фото- та відеооб’єктів вебресурсів}
+\caption{Потік даних і граничні результати методу поведінкового узгодження ознак різного походження}
 \label{fig:behavior_alignment}
 \end{figure}

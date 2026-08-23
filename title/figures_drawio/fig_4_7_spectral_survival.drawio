@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-31T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="fig_4_7_spectral_survival" name="Page-1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="leftTitle" value="Рівень залишкової відмінності" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="90" y="45" width="430" height="35" as="geometry"/></mxCell>
+        <mxCell id="rightTitle" value="Поширеність відмінності після декодування" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="640" y="45" width="430" height="35" as="geometry"/></mxCell>
+        <mxCell id="leftY" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="105" y="105" width="1" height="410" as="geometry"/></mxCell>
+        <mxCell id="leftX" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="105" y="515" width="430" height="1" as="geometry"/></mxCell>
+        <mxCell id="rightY" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="655" y="105" width="1" height="410" as="geometry"/></mxCell>
+        <mxCell id="rightX" value="" style="shape=line;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="655" y="515" width="430" height="1" as="geometry"/></mxCell>
+        <mxCell id="lb1" value="40,68" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dddddd;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="130" y="200" width="55" height="315" as="geometry"/></mxCell>
+        <mxCell id="lb2" value="39,09" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="210" y="278" width="55" height="237" as="geometry"/></mxCell>
+        <mxCell id="lb3" value="38,64" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbbbbb;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="290" y="300" width="55" height="215" as="geometry"/></mxCell>
+        <mxCell id="lb4" value="41,41" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="370" y="165" width="55" height="350" as="geometry"/></mxCell>
+        <mxCell id="lb5" value="39,57" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#777777;strokeColor=#000000;fontSize=14;fontColor=#ffffff;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="450" y="255" width="55" height="260" as="geometry"/></mxCell>
+        <mxCell id="rb1" value="0,593" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dddddd;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="680" y="300" width="55" height="215" as="geometry"/></mxCell>
+        <mxCell id="rb2" value="0,645" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="760" y="225" width="55" height="290" as="geometry"/></mxCell>
+        <mxCell id="rb3" value="0,645" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbbbbb;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="840" y="225" width="55" height="290" as="geometry"/></mxCell>
+        <mxCell id="rb4" value="0,521" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#000000;fontSize=14;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="920" y="400" width="55" height="115" as="geometry"/></mxCell>
+        <mxCell id="rb5" value="0,586" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#777777;strokeColor=#000000;fontSize=14;fontColor=#ffffff;verticalAlign=top;" vertex="1" parent="1"><mxGeometry x="1000" y="310" width="55" height="205" as="geometry"/></mxCell>
+        <mxCell id="labelsLeft" value="PNG             JPEG            WebP            MP4             WebM" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="115" y="525" width="410" height="30" as="geometry"/></mxCell>
+        <mxCell id="labelsRight" value="PNG             JPEG            WebP            MP4             WebM" style="text;html=1;align=center;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="665" y="525" width="410" height="30" as="geometry"/></mxCell>
+        <mxCell id="leftAxisLabel" value="PSNR, дБ" style="text;html=1;align=center;fontSize=14;fontColor=#000000;rotation=-90;" vertex="1" parent="1"><mxGeometry x="45" y="270" width="80" height="30" as="geometry"/></mxCell>
+        <mxCell id="rightAxisLabel" value="Частка змінених відліків" style="text;html=1;align=center;fontSize=14;fontColor=#000000;rotation=-90;" vertex="1" parent="1"><mxGeometry x="575" y="250" width="125" height="30" as="geometry"/></mxCell>
+        <mxCell id="note" value="Стовпці — середні за відеоджерелами; відрізки похибок у TikZ-редакції — 95 % блокові інтервали повторного вибирання" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="200" y="600" width="760" height="50" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

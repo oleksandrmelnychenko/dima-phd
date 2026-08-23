@@ -7,15 +7,15 @@
 
 ## Статистика
 
-- abstract_uk.tex: 11994 знаків
-- abstract_en.tex: 11984 знаків
-- джерела/цитування: 110/173
-- мітки/посилання: 98/148
-- рисунки Drawio/TikZ: 20/20
+- abstract_uk.tex: 10763 знаків
+- abstract_en.tex: 11151 знаків
+- джерела/цитування: 109/167
+- мітки/посилання: 121/170
+- рисунки Drawio/TikZ: 22/22
 - файл | слів | формул | таблиць | рисунків
-- intro.tex | 2847 | 0 | 1 | 0
-- chapter_1.tex | 8799 | 0 | 6 | 3
-- chapter_2.tex | 4820 | 8 | 0 | 5
-- chapter_3.tex | 8478 | 15 | 5 | 6
-- chapter_4.tex | 10631 | 2 | 21 | 6
-- conclusions.tex | 1747 | 0 | 0 | 0
+- intro.tex | 3440 | 0 | 1 | 0
+- chapter_1.tex | 7647 | 0 | 6 | 3
+- chapter_2.tex | 5446 | 12 | 0 | 5
+- chapter_3.tex | 12586 | 22 | 9 | 6
+- chapter_4.tex | 14097 | 2 | 24 | 8
+- conclusions.tex | 1030 | 0 | 0 | 0

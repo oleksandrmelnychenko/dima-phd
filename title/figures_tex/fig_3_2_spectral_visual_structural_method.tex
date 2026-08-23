@@ -1,24 +1,26 @@
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=3.30cm] (input) at (0,3.15)
+\node[dissertation block,text width=3.30cm] (input) at (0,3.55)
   {Статичні дані\\$X_c$};
-\node[dissertation block,text width=3.70cm] (structural) at (-4.30,0.80)
+\node[dissertation block,text width=3.70cm] (structural) at (-4.30,1.10)
   {Структурні ознаки\\$Z_s,L_s$};
-\node[dissertation block,text width=3.70cm] (visual) at (0,0.80)
-  {Детерміновані спектрально-зорові ознаки\\$Z_v,L_v$};
-\node[dissertation block,dashed,text width=3.70cm] (learned) at (4.30,0.80)
-  {Неперевірене розширення на основі навченої моделі};
-\node[dissertation block,text width=8.10cm] (profile) at (0,-2.10)
+\node[dissertation block,text width=3.70cm] (visual) at (0,1.10)
+  {Детерміновані спектральні та зорові ознаки\\$Z_v,L_v$};
+\node[dissertation block,dashed,text width=3.70cm] (learned) at (4.30,1.10)
+  {Неперевірене розширення на основі навченої моделі; до $H$ не входить};
+\node[dissertation block,text width=8.10cm] (profile) at (0,-1.45)
   {Статичний опис\\$H=\langle Z_v,Z_s,\rho_v,\rho_s,L_v,L_s,m_c,C_H\rangle$};
+\node[dissertation block,text width=6.20cm] (projection) at (0,-3.55)
+  {Маскована числова проєкція для класифікації\\$Z_c=F_C(Z_v,Z_s,m_c;\theta_C)$};
 
 \draw[dissertation arrow] (input.south) -- ++(0,-0.40) -| (structural.north);
 \draw[dissertation arrow] (input.south) -- (visual.north);
 \draw[dissertation arrow,dashed] (input.south) -- ++(0,-0.40) -| (learned.north);
 \draw[dissertation arrow] (structural.south) -- ++(0,-0.45) -| (profile.north);
 \draw[dissertation arrow] (visual.south) -- (profile.north);
-\draw[dissertation arrow,dashed] (learned.south) -- ++(0,-0.45) -| (profile.north);
+\draw[dissertation arrow] (profile.south) -- (projection.north);
 \end{tikzpicture}
-\caption{Структура методу спектрально-зорового та структурного аналізу фото- і відеооб’єктів вебресурсів}
+\caption{Потік даних методу аналізу спектральних, зорових і структурних ознак}
 \label{fig:svs_method}
 \end{figure}
