@@ -28,6 +28,7 @@ AUTHOR_KEYS = {
     "denysiuk2024intrusions",
     "denysiuk2025parallel",
     "denysiuk2025commands",
+    "denysiuk2026multimediahidden",
 }
 
 
@@ -95,7 +96,13 @@ def main() -> int:
     warnings: list[str] = []
     stats: list[str] = []
 
-    tex_paths = sorted(ROOT.glob("*.tex")) + sorted((ROOT / "figures_tex").glob("*.tex"))
+    manuscript_paths = sorted(ROOT.glob("*.tex"))
+    manuscript_text = "\n".join(read(path) for path in manuscript_paths)
+    figure_inputs = sorted(set(re.findall(r"\\input\{(figures_tex/[^}]+)\}", manuscript_text)))
+    tex_paths = manuscript_paths + [
+        (ROOT / target) if Path(target).suffix else (ROOT / target).with_suffix(".tex")
+        for target in figure_inputs
+    ]
     texts = {path.relative_to(ROOT).as_posix(): read(path) for path in tex_paths}
     corpus = "\n".join(texts.values())
 
@@ -263,8 +270,8 @@ def main() -> int:
                 failures.append(f"{name}: {len(keywords)} ключових слів, очікується 5–15")
         stats.append(f"{name}: {length} знаків")
 
-    drawio_paths = sorted((ROOT / "figures_drawio").glob("*.drawio"))
-    tikz_paths = sorted((ROOT / "figures_tex").glob("*.tex"))
+    tikz_paths = sorted(path for path in tex_paths if path.parent == ROOT / "figures_tex")
+    drawio_paths = sorted((ROOT / "figures_drawio" / f"{path.stem}.drawio") for path in tikz_paths)
     drawio_stems = {path.stem for path in drawio_paths}
     tikz_stems = {path.stem for path in tikz_paths}
     if drawio_stems != tikz_stems:
@@ -307,8 +314,8 @@ def main() -> int:
             )
 
     publication_items = len(re.findall(r"\\item\b", read(ROOT / "publication_entries.tex")))
-    if publication_items != 9:
-        failures.append(f"У publication_entries.tex виявлено {publication_items} позицій замість 9")
+    if publication_items != 10:
+        failures.append(f"У publication_entries.tex виявлено {publication_items} позицій замість 10")
 
     chapter_stats = []
     for name in ("intro.tex", "chapter_1.tex", "chapter_2.tex", "chapter_3.tex", "chapter_4.tex", "conclusions.tex"):
