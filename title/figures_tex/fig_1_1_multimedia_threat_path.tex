@@ -1,21 +1,29 @@
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation block,text width=2.75cm] (src) at (-6,2) {Зовнішнє\\джерело};
-\node[dissertation block,text width=2.90cm] (obj) at (-2,2) {Цифрове зображення\\або відеозапис};
-\node[dissertation block,text width=3.25cm] (recv) at (2,2) {Приймання та\\форматна перевірка};
-\node[dissertation block,text width=3.70cm] (proc) at (6,2) {Контрольоване розкодування\\та перетворення};
-\node[dissertation block,text width=3.60cm] (orig) at (-2,-1) {Оригінальний контейнер\\і службові дані};
-\node[dissertation block,text width=3.25cm] (store) at (2,-1) {Зберігання та\\публікація};
-\node[dissertation block,text width=3.70cm] (effect) at (6,-1) {Прояв прихованого впливу\\або формування ознак};
-\draw[dissertation arrow] (src) -- (obj);
-\draw[dissertation arrow] (obj) -- (recv);
-\draw[dissertation arrow] (recv) -- (proc);
-\draw[dissertation arrow] (recv) -- (orig);
-\draw[dissertation arrow] (orig) -- (store);
-\draw[dissertation arrow] (proc) -- (store);
-\draw[dissertation arrow] (store) -- (effect);
-\draw[dissertation arrow] (proc) -- (effect);
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  figure block/.style={dissertation block,minimum height=1.55cm}
+]
+\node[figure block,text width=2.75cm] (src) at (-6,2) {Зовнішнє\\джерело};
+\node[figure block,text width=2.90cm] (obj) at (-2,2) {Цифрове зображення\\або відеозапис};
+\node[figure block,text width=3.25cm] (recv) at (2,2) {Приймання та\\форматна перевірка};
+\node[figure block,text width=3.70cm] (proc) at (6,2) {Контрольоване розкодування\\та перетворення};
+\node[figure block,text width=3.60cm] (orig) at (2,-0.8) {Оригінальний контейнер\\і службові дані};
+\node[figure block,text width=3.25cm] (store) at (6,-0.8) {Зберігання та\\публікація};
+\node[figure block,text width=4.20cm] (effect) at (6,-3.4) {Прояв\\прихованого впливу\\або формування ознак};
+
+\coordinate (effectroute) at ($(proc.east)+(0.55,0)$);
+
+\draw[dissertation arrow] (src.east) -- (obj.west);
+\draw[dissertation arrow] (obj.east) -- (recv.west);
+\draw[dissertation arrow] (recv.east) -- (proc.west);
+\draw[dissertation arrow] (recv.south) -- (orig.north);
+\draw[dissertation arrow] (orig.east) -- (store.west);
+\draw[dissertation arrow] (proc.south) -- (store.north);
+\draw[dissertation arrow] (store.south) -- (effect.north);
+\draw[dissertation arrow] (proc.east) -- (effectroute)
+  -- (effectroute |- effect.east) -- (effect.east);
 \end{tikzpicture}
 \caption{Маршрут цифрового зображення або відеозапису у вебсистемі та точки формування ознак прихованого впливу}
 \label{fig:multimedia_threat_path}

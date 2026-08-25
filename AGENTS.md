@@ -61,6 +61,21 @@ Never allow a generic skill recommendation to override verified project facts or
 * Never import cases, samples, variables, methods, datasets, chapter names, scientific claims, conclusions, numerical values, or examples from another dissertation or from examples contained in the skill.
 * Reuse only workflow, reasoning, audit, evidence-control, and writing rules from the skill.
 
+## Dissertation TikZ figures
+
+* Before creating, materially revising, or visually auditing a block diagram, architecture diagram, process diagram, or flowchart in TikZ, use `$tikz-flowchart` from:
+
+  * `.agents/skills/tikz-flowchart/SKILL.md`.
+* Use `$doctoral-dissertation` and `$tikz-flowchart` together for dissertation figures:
+
+  * `$doctoral-dissertation` governs the scientific function of the figure, its evidence relationship, textual introduction, caption, interpretation, and place in the dissertation argument;
+  * `$tikz-flowchart` governs node layout, orthogonal connector routing, side-anchor selection, grouping, label concision, rendering, and visual review.
+* For an existing dissertation figure, treat the established project TikZ styles as the figure's theme. Do not restyle an existing figure with the bundled Material-like or Anthropic theme unless the author explicitly requests that change.
+* For a new figure without an approved project style, choose one theme as required by `$tikz-flowchart`; do not mix visual systems within one figure.
+* Plan the layout before writing or changing `\node`, `\draw`, or `\path` commands.
+* Render the actual figure and run an independent visual review by a subagent before presenting it as complete. The main agent remains the only writer and must synthesize the review.
+* Apply the project-specific `Dissertation figure preparation rules` below even if a bundled theme or example permits a different connector style.
+
 ## Academic ontology work
 
 * Before substantive work involving a scientific publication, scientific article, publication structure, bibliography, publication ethics, hypothesis, scientific novelty, or a working program of an academic discipline, use `$use-academic-ontologies` from:
@@ -687,6 +702,42 @@ Do not merely repeat numerical results in different words.
 
   merely for stylistic consistency without checking their use across the project.
 * If a proposed notation change has cross-chapter consequences, perform an impact scan before applying it.
+
+# Dissertation figure preparation rules
+
+Every dissertation figure must have a clear scientific function, a textual reference before its appearance, and a substantive interpretation in the surrounding text.
+
+## Block diagrams and flowcharts
+
+For every new or materially revised block diagram, architecture diagram, process diagram, or flowchart:
+
+* use an editable vector source when practicable; prefer the existing TikZ workflow for figures under `title/figures_tex/` unless another format is justified by the task;
+* plan the node layout before routing connectors;
+* keep blocks, containers, labels, connectors, arrowheads, and annotations from overlapping or being clipped;
+* use only horizontal and vertical connector segments; diagonal connectors are not permitted;
+* form direction changes as 90-degree turns; a small corner radius may be used when it improves readability without obscuring the route;
+* connect arrows to explicit side anchors so that they enter the block boundary perpendicularly and terminate at the boundary;
+* do not route connectors through blocks, labels, captions, or unrelated containers;
+* minimize connector crossings; if crossings remain, reposition blocks or reroute connectors before considering the figure complete;
+* keep related blocks aligned and maintain consistent spacing, block sizes, typography, line widths, arrowheads, and visual hierarchy;
+* use concise labels and ensure that all text remains readable at the actual dissertation page scale.
+
+The orthogonal-connector rule applies to block-based diagrams. It does not prohibit scientifically meaningful curves, regression lines, plotted data, axes, geometric constructions, or other non-connector elements in data visualizations and scientific plots.
+
+## Rendering and visual verification
+
+Do not approve a figure by inspecting source code alone.
+
+Before considering a new or revised figure complete:
+
+1. compile or export the actual artifact;
+2. inspect the resulting PDF or a high-resolution render at the intended page scale;
+3. verify that no block, label, connector, arrowhead, legend, or annotation overlaps, is clipped, or extends outside the intended figure area;
+4. verify that connectors follow the required routes and that arrow direction is unambiguous;
+5. verify semantic agreement among the figure, its caption, its first textual reference, and the interpretation that follows;
+6. after every geometry change, render and inspect the figure again because a local correction may introduce a new overlap or routing defect.
+
+Photographs, screenshots, raster maps, heatmaps, and other inherently raster materials are not required to be converted into vector objects. For such materials, preserve an editable source or a reproducible generation procedure when available and verify resolution, legibility, and cropping at the final page scale.
 
 # Terminology consistency
 
