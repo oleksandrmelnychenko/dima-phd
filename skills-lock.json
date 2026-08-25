@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "doctoral-dissertation": {
+      "source": "syc9336-rgb/doctoral-dissertation-skills",
+      "sourceType": "github",
+      "skillPath": "skills/doctoral-dissertation/SKILL.md",
+      "computedHash": "ac8771907fb098e551a5554ef0cd811e68bcbbdd277a4a4b159d06b3218f2a95"
+    }
+  }
+}

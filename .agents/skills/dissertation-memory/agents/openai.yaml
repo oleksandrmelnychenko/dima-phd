@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dissertation Memory"
+  short_description: "Track approved dissertation writing decisions"
+  default_prompt: "Use $dissertation-memory to review this dissertation fragment and update the project memory after my decision."
+policy:
+  allow_implicit_invocation: true
+

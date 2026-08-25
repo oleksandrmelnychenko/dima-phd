@@ -1,0 +1,7 @@
+interface:
+  display_name: "Академічні онтології"
+  short_description: "Публікації й робочі програми за онтологіями"
+  default_prompt: "Застосуй $use-academic-ontologies, щоб структурувати академічний артефакт у межах локальних онтологій."
+
+policy:
+  allow_implicit_invocation: true

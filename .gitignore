@@ -18,3 +18,8 @@
 # Generated builds and visual-review previews
 title/_build/
 title/tmp/
+/_tools/tectonic/
+
+# Agent working directory
+/my/
+/suport_info/
