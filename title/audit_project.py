@@ -55,6 +55,30 @@ def line_hits(text: str, pattern: re.Pattern[str]) -> list[str]:
     ]
 
 
+def without_math_text(text: str) -> str:
+    """Remove prose embedded in math commands before checking identifiers."""
+    previous = None
+    while text != previous:
+        previous = text
+        text = re.sub(r"\\(?:text|textrm|textnormal|operatorname)\{[^{}]*\}", "", text)
+    return text
+
+
+def has_cyrillic_math_identifier(text: str) -> bool:
+    return bool(re.search(r"[А-Яа-яІіЇїЄєҐґ]", without_math_text(text)))
+
+
+def is_upper_latin_set_symbol(symbol: str) -> bool:
+    """Check the leading symbol on the left side of a set definition."""
+    lhs = symbol.split("=", 1)[0].strip()
+    return bool(
+        re.match(
+            r"(?:[A-Z]|\\(?:mathrm|mathbf|mathsf)\s*\{?[A-Z]\}?)(?:\s*[_^]|\s*$)",
+            lhs,
+        )
+    )
+
+
 def parse_equations(text: str) -> list[dict[str, object]]:
     equations: list[dict[str, object]] = []
     pattern = re.compile(r"\\begin\{equation\}(.*?)\\end\{equation\}", re.S)
@@ -66,7 +90,11 @@ def parse_equations(text: str) -> list[dict[str, object]]:
         for raw in body.splitlines():
             clean = re.sub(r"%.*$", "", raw).strip()
             clean = re.sub(r"\\label\{[^}]+\}", "", clean).strip()
-            clean = re.sub(r"\\(?:begin|end)\{gathered\}", "", clean).strip()
+            clean = re.sub(
+                r"\\(?:begin|end)\{(?:gathered|cases|aligned|array|split)\}",
+                "",
+                clean,
+            ).strip()
             if clean:
                 significant.append(clean)
         last = significant[-1] if significant else ""
@@ -82,6 +110,7 @@ def parse_equations(text: str) -> list[dict[str, object]]:
         equations.append(
             {
                 "line": start_line,
+                "body": body,
                 "labels": labels,
                 "last": last,
                 "next": next_line,
@@ -197,35 +226,71 @@ def main() -> int:
                 + " | ".join(hits)
             )
 
-    forbidden_math = re.compile(
-        r"\\mathcal|\\mathbb|\\mathfrak|\\vartheta|x\s*\^\s*\\star|"
-        r"\\begin\{(?:aligned|cases|array|split)\}"
+    equation_refs = set(refs)
+    set_definition = re.compile(
+        r"\$(?P<symbol>[^$\n]+)\$\s*(?:---|—)\s*множин(?:а|и|ою)\b",
+        re.I,
     )
     for name in FORMULA_TEXTS:
-        hits = line_hits(texts[name], forbidden_math)
-        if hits:
-            failures.append(f"Заборонене математичне оформлення у {name}: " + " | ".join(hits))
+        for number, line in enumerate(texts[name].splitlines(), 1):
+            for math in re.findall(r"\$([^$]+)\$", line):
+                if has_cyrillic_math_identifier(math):
+                    failures.append(
+                        f"{name}:{number} — кириличний буквений ідентифікатор у математичному виразі: ${math}$"
+                    )
+            for match in set_definition.finditer(line):
+                symbol = match.group("symbol")
+                if not is_upper_latin_set_symbol(symbol):
+                    failures.append(
+                        f"{name}:{number} — множину позначено не великою латинською літерою: ${symbol}$"
+                    )
         for equation in parse_equations(texts[name]):
             label = ",".join(equation["labels"]) or "без мітки"
-            if not str(equation["last"]).endswith(","):
+            labels_in_equation = list(equation["labels"])
+            if not labels_in_equation:
                 failures.append(
-                    f"{name}:{equation['line']} ({label}) — формула не завершується комою"
+                    f"{name}:{equation['line']} — нумерована формула не має мітки для текстового посилання"
                 )
-            if not re.match(r"(?:\\noindent\s*)?де\s", str(equation["next"]), re.I):
+            for item in labels_in_equation:
+                if item not in equation_refs:
+                    failures.append(
+                        f"{name}:{equation['line']} ({item}) — нумерована формула не має текстового посилання"
+                    )
+            if not re.search(r"[,.;:]$", str(equation["last"])):
                 failures.append(
-                    f"{name}:{equation['line']} ({label}) — пояснення не починається з «де »"
+                    f"{name}:{equation['line']} ({label}) — наприкінці формули немає пунктуаційного знака речення"
+                )
+            next_line = str(equation["next"])
+            if re.match(r"(?:\\noindent\s*)?де\s*:", next_line, re.I):
+                failures.append(
+                    f"{name}:{equation['line']} ({label}) — після «де» не ставлять двокрапку"
+                )
+            if re.match(r"\\indent\s+де\b", next_line, re.I):
+                failures.append(
+                    f"{name}:{equation['line']} ({label}) — пояснення «де» має абзацний відступ"
                 )
             previous = str(equation["previous"])
-            if not previous.endswith(":"):
-                failures.append(
-                    f"{name}:{equation['line']} ({label}) — вступне речення не завершується двокрапкою"
-                )
-            if equation["labels"] and not any(
-                f"\\eqref{{{item}}}" in previous for item in equation["labels"]
+            if labels_in_equation and not any(
+                f"\\eqref{{{item}}}" in previous for item in labels_in_equation
             ):
                 failures.append(
-                    f"{name}:{equation['line']} ({label}) — вступне речення не називає номер формули"
+                    f"{name}:{equation['line']} ({label}) — безпосереднє текстове введення не містить посилання на формулу"
                 )
+            if has_cyrillic_math_identifier(str(equation["body"])):
+                failures.append(
+                    f"{name}:{equation['line']} ({label}) — кириличний буквений ідентифікатор у формулі"
+                )
+
+    hardcoded_formula_ref = re.compile(
+        r"\bформул(?:а|и|і|ою|у)\s*~?\(\s*[А-ЯA-Z]?\d+(?:\.\d+)?\s*\)",
+        re.I,
+    )
+    for name in FORMULA_TEXTS:
+        hits = line_hits(texts[name], hardcoded_formula_ref)
+        if hits:
+            failures.append(
+                f"Жорстко задані номери формул у {name}; використайте \\eqref: " + " | ".join(hits)
+            )
 
     placeholder_pattern = re.compile(
         r"TODO|FIXME|ПОТРІБНЕ ДЖЕРЕЛО|ВКАЗАТИ ЗНАЧЕННЯ|\\manualcheck",
@@ -305,8 +370,12 @@ def main() -> int:
         text = read(path)
         if re.search(r"\\(?:scriptsize|tiny)\b", text):
             failures.append(f"{path.name}: використано надто дрібний шрифт")
-        if forbidden_math.search(text):
-            failures.append(f"{path.name}: наявне заборонене математичне оформлення")
+        for number, line in enumerate(text.splitlines(), 1):
+            for math in re.findall(r"\$([^$]+)\$", line):
+                if has_cyrillic_math_identifier(math):
+                    failures.append(
+                        f"{path.name}:{number} — кириличний буквений ідентифікатор у математичному виразі"
+                    )
         legacy_state = re.findall(r"\b(?:S_T|R_A)\b", text)
         if legacy_state:
             failures.append(

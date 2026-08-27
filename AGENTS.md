@@ -668,6 +668,12 @@ Do not merely repeat numerical results in different words.
 
 * Preserve the mathematical meaning of existing formulas unless the user explicitly requests a mathematical correction or modification.
 * Before modifying notation, search its use across the relevant dissertation materials.
+* Use letters of the Latin alphabet for alphabetic identifiers in formulas. Denote sets with uppercase Latin letters.
+* Established Greek letters and special mathematical symbols may be retained when they have a conventional meaning or are already defined in the manuscript. Do not replace existing notation without searching all dependent uses and assessing the impact of the change.
+* Apply the formula-formatting requirements of Order of the Ministry of Education and Science of Ukraine No. 40 of 12 January 2017 and SOU 207.01:2025 of Khmelnytskyi National University, clauses 5.13.1--5.13.10, within their stated scope.
+* Place a displayed formula on a separate centered line immediately after the text that first mentions it. Keep at least one line of vertical space before and after the display.
+* Number only formulas referenced in the text. In the main text, use either continuous Arabic numbering or the established chapter-based form `chapter.formula`; place the number in parentheses at the right edge. In appendices, use `APPENDIX-LETTER.formula`, for example `(А.3)`.
+* Use LaTeX labels and cross-references for numbered formulas. Do not hard-code formula numbers in prose.
 * Maintain consistent notation for:
 
   * scalars;
@@ -682,9 +688,17 @@ Do not merely repeat numerical results in different words.
 * Introduce each formula in the text before presenting it.
 * Explain what the formula determines, models, computes, or formalizes.
 * When scientifically relevant, explain the property or relationship represented by the formula, not only the calculation it performs.
-* After a formula, define newly introduced symbols using the established project convention beginning with:
+* Define newly introduced symbols directly below the formula in the order in which they appear. Begin the explanation on a new unindented line with:
 
-  * `де, ...`
+  * `де ...`
+
+  Do not place a colon after `де`.
+* For physical quantities, use notation consistent with DSTU ISO 80000-1:2016 and state the applicable measurement units. Leave a space between a numerical value and a unit except for plane-angle units conventionally written next to the value.
+* Separate consecutive displayed formulas that have no intervening prose with commas.
+* Treat every formula as part of its sentence and use the punctuation required by that sentence. Do not require a comma after every formula mechanically.
+* Break a long formula only at an operation sign, repeat the sign at the end of the preceding line and at the start of the next line, use `\times` when a multiplication sign is needed at a break, and avoid breaking at a division colon.
+* Keep subscripts, superscripts, and exponents consistently sized throughout the manuscript; they must remain smaller than the base symbol.
+* Create formula symbols with LaTeX mathematical environments or another appropriate mathematical editor; do not insert formulas as raster images.
 * Do not begin an explanatory sentence with `Формула`.
 * When referring to a numbered formula:
 

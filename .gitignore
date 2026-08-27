@@ -18,6 +18,7 @@
 # Generated builds and visual-review previews
 title/_build/
 title/tmp/
+title/__pycache__
 /_tools/tectonic/
 
 # Agent working directory
