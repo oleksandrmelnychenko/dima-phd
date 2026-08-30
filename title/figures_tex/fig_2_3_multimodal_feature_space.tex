@@ -29,7 +29,7 @@
 \node[dissertation small,text width=2.55cm,minimum height=11mm] (stop) at (-0.55,-1.75)
   {Інтеграцію припинено;\\
    причину відмови зафіксовано};
-\node[dissertation small,text width=1.60cm,minimum height=10mm] (integration) at (2.10,0.50)
+\node[dissertation small,text width=1.75cm,minimum height=10mm] (integration) at (2.10,0.50)
   {Узгоджене\\об’єднання\\$F_I$};
 \node[decision,minimum width=1.45cm,minimum height=9mm] (composition) at (4.50,0.50)
   {Вхід\\повний?};
@@ -50,13 +50,13 @@
 \fill[black] (inputbus) circle (1.3pt);
 \draw[dissertation arrow] (inputbus) -- (validation.west);
 \draw[dissertation arrow] (validation.east) -- (condition.west);
-\draw[dissertation arrow] (condition.east) -- node[midway,above,font=\scriptsize,fill=white,inner sep=0.5pt]{так} (integration.west);
-\draw[dissertation arrow] (condition.south) -- node[midway,right,font=\scriptsize,fill=white,inner sep=0.5pt]{ні} (stop.north);
+\draw[dissertation arrow] (condition.east) -- node[midway,above,font=\footnotesize,fill=white,inner sep=0.5pt]{так} (integration.west);
+\draw[dissertation arrow] (condition.south) -- node[midway,right,font=\footnotesize,fill=white,inner sep=0.5pt]{ні} (stop.north);
 \draw[dissertation arrow] (integration.east) -- (composition.west);
 \coordinate (resultbus) at (5.75,0.50);
 \draw[thick] (composition.east) -- (resultbus);
-\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\scriptsize,fill=white,inner sep=0.5pt]{так} (full.west);
-\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\scriptsize,fill=white,inner sep=0.5pt]{ні} (partial.west);
+\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\footnotesize,fill=white,inner sep=0.5pt]{так} (full.west);
+\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\footnotesize,fill=white,inner sep=0.5pt]{ні} (partial.west);
 \end{tikzpicture}
 \caption{Перевірка контракту та формування повного або часткового інтегрованого представлення}
 \label{fig:feature_space}

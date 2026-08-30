@@ -49,7 +49,7 @@ mkdir -p "$build_dir"
 
 (
     cd "$script_dir"
-    "$tectonic" main.tex --outdir "$build_dir" --keep-logs
+    "$tectonic" main.tex --outdir "$build_dir" --keep-logs --keep-intermediates
 )
 
 cp "$build_dir/main.pdf" "$script_dir/$output_name"

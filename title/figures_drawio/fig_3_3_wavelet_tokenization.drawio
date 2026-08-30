@@ -8,7 +8,7 @@
         <mxCell id="n1" value="Вхід за &lt;b&gt;m&lt;sub&gt;v&lt;/sub&gt; = 1&lt;/b&gt;&lt;br&gt;&lt;b&gt;X&lt;sub&gt;v&lt;/sub&gt;, X&lt;sub&gt;t&lt;/sub&gt;, θ&lt;sub&gt;v&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="40" y="100" width="210" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="n2" value="Локальні характеристики, дискретне косинусне й хвилькове перетворення, залишкові фільтри&lt;br&gt;&lt;b&gt;X&lt;sub&gt;f&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+        <mxCell id="n2" value="Локальні характеристики, дискретне косинусне й дискретне багатомасштабне перетворення, залишкові фільтри&lt;br&gt;&lt;b&gt;X&lt;sub&gt;f&lt;/sub&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="300" y="80" width="300" height="110" as="geometry"/>
         </mxCell>
         <mxCell id="n3" value="Локальні описи з просторово-часовими координатами" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
