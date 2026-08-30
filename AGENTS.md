@@ -200,6 +200,13 @@ Distinguish clearly between:
 * Do not artificially increase textual complexity merely to make the prose appear more scientific.
 * Prefer semantic precision over lexical complexity.
 
+## Evidence-based scientific and academic strengthening
+
+* Do not limit substantive rewriting to grammar, terminology, and stylistic polishing. Where the available project evidence permits, strengthen the scientific and academic quality of the text by making its research function, central scholarly judgment, logical relationship to the surrounding argument, evidence anchor, scientific interpretation, and justified local conclusion more explicit.
+* Scientific and academic strengthening means improving analytical depth, precision, evidence-to-claim alignment, and the explanatory connection between facts, methods, results, and conclusions while preserving the established scientific content and the original direction of the argument.
+* Do not interpret strengthening as permission to intensify claim wording, add unsupported causality, generalize beyond the evidence, introduce new scientific entities, or replace clear language with decorative complexity.
+* If the source material does not support a stronger scientific judgment or the required interpretation, preserve the justified claim strength and identify the evidence or reasoning gap instead of concealing it through academic-sounding prose.
+
 # Academic-professorial writing style
 
 Every substantive dissertation paragraph must read as part of a mature scientific manuscript written by a domain specialist.
