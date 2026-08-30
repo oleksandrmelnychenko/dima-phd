@@ -1,43 +1,59 @@
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
-\node[dissertation small,text width=3.25cm] (object) at (-5.05,2.30)
+\node[dissertation small,text width=3.25cm] (object) at (-5.40,2.50)
   {Незмінна байтова\\
    послідовність $X_{mm}$};
-\node[dissertation small,text width=3.35cm] (visual) at (-1.45,3.10)
+\node[dissertation small,text width=3.35cm] (visual) at (-1.40,1.20)
   {Розкодоване зорове\\
    представлення $X_v$};
-\node[dissertation small,text width=3.35cm] (structural) at (-1.45,1.50)
-  {Структурне представлення $X_s$\\
-   і службові значення $X_m$};
-\node[dissertation small,text width=3.90cm] (static) at (2.35,2.30)
+\node[dissertation small,text width=3.35cm] (structural) at (-1.40,-0.60)
+  {Структурне\\
+   представлення $X_s$\\
+   і службові\\
+   значення $X_m$};
+\node[dissertation small,text width=3.90cm] (static) at (2.80,2.50)
   {Статична частина входу\\
    $X_c=\langle X_{mm},X_v,X_s,X_m\rangle$};
 
-\node[dissertation small,text width=3.25cm] (registered) at (-5.05,-0.45)
-  {Події контрольованого\\
+\node[dissertation small,text width=3.25cm] (registered) at (-5.40,-2.30)
+  {Події\\
+   контрольованого\\
    оброблення};
-\node[dissertation small,text width=3.35cm] (events) at (-1.45,-0.45)
+\node[dissertation small,text width=3.35cm] (events) at (-1.40,-2.30)
   {Причинно пов’язані\\
    події $X_b$};
-\node[dissertation small,text width=3.90cm] (context) at (2.35,-1.45)
-  {Маска доступності та відомості\\
-   про походження і якість $m_A,C$};
-\node[dissertation small,text width=3.55cm] (input) at (6.35,0.20)
+\node[dissertation small,text width=3.90cm] (context) at (2.80,-3.55)
+  {Маска доступності\\
+   та відомості про\\
+   походження й якість\\
+   $m_A,C$};
+\node[dissertation small,text width=3.55cm] (input) at (6.35,-0.85)
   {Повний вхід моделі\\
    $X_A=\langle X_c,X_b,m_A,C\rangle$};
 
-\draw[dissertation arrow] (object.east) -- (visual.west);
-\draw[dissertation arrow] (object.east) -- (structural.west);
-\draw[dissertation arrow] (object.north) -- ++(0,1.35) -| (static.north);
-\draw[dissertation arrow] (visual.east) -- (static.155);
-\draw[dissertation arrow] (structural.east) -- (static.205);
-\draw[dissertation arrow] (object.south) -- (registered.north);
+\draw[dissertation arrow] (object.east) -- (static.west);
+\coordinate (visualbranch) at (object.center |- visual.center);
+\coordinate (structuralbranch) at (object.center |- structural.center);
+\draw[thick] (object.south) -- (visualbranch) -- (structuralbranch);
+\draw[dissertation arrow] (structuralbranch) -- (registered.north);
+\fill[black] (visualbranch) circle (1.3pt);
+\fill[black] (structuralbranch) circle (1.3pt);
+\draw[dissertation arrow] (visualbranch) -- (visual.west);
+\draw[dissertation arrow] (structuralbranch) -- (structural.west);
+
+\coordinate (featurebus) at (0.60,0.30);
+\draw[thick] (visual.east) -- (visual.east -| featurebus);
+\draw[thick] (structural.east) -- (structural.east -| featurebus);
+\draw[thick] (visual.east -| featurebus) -- (structural.east -| featurebus);
+\fill[black] (featurebus) circle (1.3pt);
+\draw[dissertation arrow] (featurebus) -- (2.80,0.30) -- (static.south);
+
 \draw[dissertation arrow] (registered.east) -- (events.west);
-\draw[dissertation arrow] (static.east) -- (input.155);
-\draw[dissertation arrow] (events.east) -- (input.west);
-\draw[dissertation arrow] (context.east) -- (input.205);
+\draw[dissertation arrow] (events.east) -- ++(0.55,0) |- (input.west);
+\draw[dissertation arrow] (static.east) -- ++(0.40,0) -| (input.north);
+\draw[dissertation arrow] (context.east) -- ++(0.40,0) -| (input.south);
 \end{tikzpicture}
-\caption{Формування повного входу моделі з незмінного об’єкта, похідних представлень і причинно пов’язаних подій}
+\caption{Склад і походження даних повного входу мультимодальної моделі}
 \label{fig:multilevel_container}
 \end{figure}

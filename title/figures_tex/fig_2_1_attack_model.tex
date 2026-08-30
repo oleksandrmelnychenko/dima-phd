@@ -6,12 +6,12 @@
 \node[dissertation block,text width=2.75cm] (payload) at (-5.65,-0.65)
   {Приховане навантаження\\$P_A$};
 \node[dissertation block,text width=3.00cm] (prepare) at (-2.10,0.35)
-  {Підготовка об’єкта\\$E_A(\Theta_A)$};
+  {Підготовка об’єкта\\$E_A(\theta_A)$};
 \node[dissertation block,text width=2.75cm] (prepared) at (1.20,0.35)
   {Підготовлений об’єкт\\$X_{mm}^{\prime}$};
-\node[dissertation block,text width=3.45cm] (conditions) at (4.65,0.35)
+\node[dissertation block,text width=3.45cm] (conditions) at (4.65,-1.75)
   {Умови прихованої доставки\\$V_f=1$, $D\leq\varepsilon$,\\$S(P_A,G)\geq\tau_A$};
-\node[dissertation block,text width=3.30cm] (route) at (4.65,-1.75)
+\node[dissertation block,text width=3.30cm] (route) at (4.65,0.35)
   {Послідовність $G$\\$g_j\in R_{web}$};
 \node[dissertation block,text width=4.40cm] (observations) at (0.55,-3.20)
   {Статичні та подієві спостереження\\$X_s,X_v,X_f,X_b$};
@@ -22,9 +22,9 @@
 \fill[black] (inputbus) circle (1.3pt);
 \draw[dissertation arrow] (inputbus) -- (prepare.west);
 \draw[dissertation arrow] (prepare.east) -- (prepared.west);
-\draw[dissertation arrow] (prepared.east) -- (conditions.west);
-\draw[dissertation arrow] (conditions.south) -- (route.north);
-\draw[dissertation arrow] (route.south) |- (observations.east);
+\draw[dissertation arrow] (prepared.east) -- (route.west);
+\draw[dissertation arrow] (route.south) -- (conditions.north);
+\draw[dissertation arrow] (conditions.south) |- (observations.east);
 \end{tikzpicture}
 \caption{Причинна схема формування спостережень за умов прихованої доставки мультимедійного об’єкта}
 \label{fig:attack_model}

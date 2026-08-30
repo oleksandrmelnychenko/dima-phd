@@ -1,45 +1,63 @@
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,scale=0.95,transform shape,
+\begin{tikzpicture}[x=1cm,y=1cm,scale=0.88,transform shape,
   decision/.style={diamond,draw=black,line width=0.8pt,fill=white,
-    aspect=1.45,align=center,font=\footnotesize,inner sep=1pt}]
-\node[dissertation small,text width=3.75cm] (static) at (-5.70,2.15)
-  {Вхід 1. Статичний опис\\[-1pt]
-   $H=\langle Z_v,Z_s,\rho_v,\rho_s,$\\
-   $L_v,L_s,m_c,C_H\rangle$};
-\node[dissertation small,text width=3.75cm] (behavior) at (-5.70,0.35)
-  {Вхід 2. Ознаки подій\\[-1pt]
+    aspect=1.35,align=center,font=\footnotesize,inner sep=1pt}]
+\node[dissertation small,text width=3.10cm] (static) at (-6.50,2.20)
+  {Статичний опис\\[-1pt]
+   $H=\langle Z_v,Z_s,$\\
+   $\rho_v,\rho_s,L_v,L_s,$\\
+   $m_c,C_H\rangle$};
+\node[dissertation small,text width=2.70cm] (behavior) at (-6.50,0.50)
+  {Ознаки подій\\[-1pt]
    і поведінки $Z_b$};
-\node[dissertation small,text width=3.75cm] (context) at (-5.70,-1.35)
-  {Вхід 3. Маска доступності\\[-1pt]
-   та відомості $m_A,C_I,\theta_I$};
+\node[dissertation small,text width=3.10cm] (context) at (-6.50,-1.15)
+  {Маска доступності,\\[-1pt]
+   відомості й конфігурація\\
+   $m_A,C_I,\theta_I$};
 
-\node[dissertation small,text width=3.00cm,minimum height=18mm] (validation) at (-1.65,0.35)
-  {Перевірка даних\\[1pt]
-   ідентифікатор; SHA-256;\\
+\node[dissertation small,text width=2.40cm,minimum height=19mm] (validation) at (-3.45,0.50)
+  {Перевірка контракту\\
+   ідентифікатор;\\
+   контрольна сума;\\
    версії схем; походження;\\
-   причинна належність\\
-   подій};
-\node[decision,minimum width=1.80cm,minimum height=10mm] (condition) at (1.45,0.35)
-  {Узгоджено?};
-\node[dissertation small,text width=2.15cm,minimum height=13mm,inner sep=2pt] (integration) at (4.10,0.35)
+   причинна\\
+   належність;\\
+   маска; якість};
+\node[decision,minimum width=1.55cm,minimum height=9mm] (condition) at (-0.55,0.50)
+  {Вимоги\\виконано?};
+\node[dissertation small,text width=2.55cm,minimum height=11mm] (stop) at (-0.55,-1.75)
+  {Інтеграцію припинено;\\
+   причину відмови зафіксовано};
+\node[dissertation small,text width=1.60cm,minimum height=10mm] (integration) at (2.10,0.50)
   {Узгоджене\\об’єднання\\$F_I$};
-\node[dissertation small,text width=2.85cm,minimum height=13mm,inner sep=2pt] (joint) at (7.00,0.35)
-  {Вихід: інтегроване\\
+\node[decision,minimum width=1.45cm,minimum height=9mm] (composition) at (4.50,0.50)
+  {Вхід\\повний?};
+\node[dissertation small,text width=3.00cm,minimum height=11mm] (full) at (7.85,1.65)
+  {Повне\\
    представлення\\[-1pt]
    $Z=\langle z,L,m_A,C_I\rangle$};
-\node[dissertation small,text width=3.20cm,minimum height=11mm] (stop) at (1.45,-1.75)
-  {Інтеграцію припинено;\\
-   представлення $Z$ не формують};
+\node[dissertation small,text width=3.60cm,minimum height=13mm] (partial) at (7.85,-1.20)
+  {Підтримуване часткове представлення\\[-1pt]
+   $Z^{\partial}=\langle z_{sv},L_{sv},$\\
+   $(m_s,m_v,0),C_I^{\partial}\rangle$};
 
-\draw[dissertation arrow] (static.east) -- (validation.155);
-\draw[dissertation arrow] (behavior.east) -- (validation.west);
-\draw[dissertation arrow] (context.east) -- (validation.205);
+\coordinate (inputbus) at (-4.80,0.50);
+\draw[thick] (static.east) -- (static.east -| inputbus);
+\draw[thick] (behavior.east) -- (behavior.east -| inputbus);
+\draw[thick] (context.east) -- (context.east -| inputbus);
+\draw[thick] (static.east -| inputbus) -- (context.east -| inputbus);
+\fill[black] (inputbus) circle (1.3pt);
+\draw[dissertation arrow] (inputbus) -- (validation.west);
 \draw[dissertation arrow] (validation.east) -- (condition.west);
-\draw[dissertation arrow] (condition.east) -- node[above,font=\footnotesize,fill=white,inner sep=1pt]{так} (integration.west);
-\draw[dissertation arrow] (integration.east) -- (joint.west);
-\draw[dissertation arrow] (condition.south) -- node[right,font=\footnotesize,fill=white,inner sep=1pt]{ні} (stop.north);
+\draw[dissertation arrow] (condition.east) -- node[midway,above,font=\scriptsize,fill=white,inner sep=0.5pt]{так} (integration.west);
+\draw[dissertation arrow] (condition.south) -- node[midway,right,font=\scriptsize,fill=white,inner sep=0.5pt]{ні} (stop.north);
+\draw[dissertation arrow] (integration.east) -- (composition.west);
+\coordinate (resultbus) at (5.75,0.50);
+\draw[thick] (composition.east) -- (resultbus);
+\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\scriptsize,fill=white,inner sep=0.5pt]{так} (full.west);
+\draw[dissertation arrow] (resultbus) |- node[pos=0.20,right,font=\scriptsize,fill=white,inner sep=0.5pt]{ні} (partial.west);
 \end{tikzpicture}
-\caption{Послідовність перевірки узгодженості та формування інтегрованого представлення}
+\caption{Перевірка контракту та формування повного або часткового інтегрованого представлення}
 \label{fig:feature_space}
 \end{figure}
